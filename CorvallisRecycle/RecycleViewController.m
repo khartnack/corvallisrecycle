@@ -1,35 +1,33 @@
 //
-//  ViewController.m
-//  CorvallisRecycle
+//  RecycleViewController.m
+//  TableMain
 //
-//  Created by Dave Beltramini on 5/6/15.
+//  Created by Dave Beltramini on 5/3/15.
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
 //
 
-
-#import "AppDelegate.h"
+#import "RecycleViewController.h"
 #import "ViewController.h"
+#import "AppDelegate.h"
 #import "ItemViewController.h"
-#import "BNRQuizViewController.h"
 #import "BusinessViewController.h"
-#import "BusinessInfoViewController.h"
 
-@interface ViewController () <NSURLSessionDelegate>
+@interface RecycleViewController () <NSURLSessionDelegate>
 
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, copy) NSArray *courses;
 
+
 @end
 
-@implementation ViewController
-@synthesize BNRQuizViewController;
+@implementation RecycleViewController
 
-- (instancetype)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
+
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        // Initialization code
         self.navigationItem.title = @"Categories";
-        
         NSURLSessionConfiguration *config =
         [NSURLSessionConfiguration defaultSessionConfiguration];
         
@@ -37,9 +35,19 @@
                                                  delegate:self
                                             delegateQueue:nil];
         
-        [self fetchFeed];
     }
     return self;
+}
+
+
+- (void)setURL:(NSURL *)URL
+{
+    _URL = URL;
+    
+    NSLog(@"--%@",URL);
+    if (_URL) {
+        [self fetchFeed];
+    }
 }
 
 - (void)viewDidLoad
@@ -48,48 +56,25 @@
     
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
-    
-    
-    
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Info" style: UIBarButtonItemStylePlain    target:self action:@selector(home)];
-    //  UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Info" style: UIBarButtonItemStylePlain    target:self action:nil];
-    self.navigationItem.leftBarButtonItem = backButton;
-    
-    /* if(backButton.BNRQuizViewController == nil) {
-     BNRQuizViewController  *view2 = [[BNRQuizViewController  alloc] initWithNibName:@"View2" bundle:[NSBundle mainBundle]];
-     self.BNRQuizViewController  = view2;
-     // [view2 release];
-     }
-     //test
-     [self.navigationController pushViewController:self.BNRQuizViewController animated:YES];*/
-    
-    /*UIBarButtonItem *cameraItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:nil];
-     
-     NSArray *actionButtonItems = @[cameraItem];
-     self.navigationItem.rightBarButtonItems = actionButtonItems;*/
-    
-    
 }
 
--(void)home{
-    
-    NSLog(@"navigation call for info");
-    [self.navigationController pushViewController:BNRQuizViewController animated:YES];
-    
-    
-    
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
+    // Release anything that's not essential, such as cached data
+}
 
 
 
 - (void)fetchFeed
 {
     
-    //https://bookapi.bignerdranch.com/private/courses.json
-    NSString *requestString = @"http://web.engr.oregonstate.edu/~beltramk/cs496/nerdranch5";
-    NSURL *url = [NSURL URLWithString:requestString];
-    NSURLRequest *req = [NSURLRequest requestWithURL:url  cachePolicy:NSURLRequestReloadIgnoringCacheData
+    NSURLRequest *req = [NSURLRequest requestWithURL:_URL cachePolicy:NSURLRequestReloadIgnoringCacheData
                                      timeoutInterval:60.0];
     
     NSURLSessionDataTask *dataTask =
@@ -97,12 +82,20 @@
                     completionHandler:
      ^(NSData *data, NSURLResponse *response, NSError *error) {
          
+         
+         NSLog(@"data -->%@", data);
+         NSError *err = nil;
          NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data
                                                                     options:0
-                                                                      error:nil];
+                                                                      error:&err];
+         
+         NSLog(@"err %@",err);
+         
+         NSLog(@"jsonObject -->%@", jsonObject);
          self.courses = jsonObject[@"courses"];
          
-         NSLog(@"%@", self.courses);
+         
+         NSLog(@"courses -->%@", self.courses);
          
          dispatch_async(dispatch_get_main_queue(), ^{
              [self.tableView reloadData];
@@ -130,36 +123,25 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    //NSLog(@"called");
     NSDictionary *course = self.courses[indexPath.row];
     NSURL *URL = [NSURL URLWithString:course[@"url"]];
     
+    self.businessViewController.title = course[@"title"];
+    self.businessViewController.URL = URL;
     NSLog(@"--%@",URL);
-    
-    self.itemViewController.title = course[@"title"];
-    self.itemViewController.URL = URL;
-    
-    [self.navigationController pushViewController:self.itemViewController
-                                         animated:YES];
+    [self.navigationController pushViewController:self.businessViewController animated:YES];
 }
-
-
-
 
 - (void)  URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
  didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
    completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential *))completionHandler
 {
-    NSLog(@"here");
     NSURLCredential *cred =
     [NSURLCredential credentialWithUser:@"BigNerdRanch"
                                password:@"AchieveNerdvana"
-     //                           persistence:NSURLCredentialPersistenceNone];
                             persistence:NSURLCredentialPersistenceForSession];
     completionHandler(NSURLSessionAuthChallengeUseCredential, cred);
-    
 }
 
-@end
 
+@end
