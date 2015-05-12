@@ -18,6 +18,7 @@
 @interface BusinessInfoViewController () <NSURLSessionDelegate>
 
 @property (nonatomic, strong) NSURLSession *session;
+//@property (nonatomic, strong) NSURL *urls;
 @property (nonatomic, strong) NSArray *courses;
 //@property (nonatomic, copy) NSArray *courses;
 //@property (nonatomic, copy) NSData *data;
@@ -175,6 +176,10 @@
     self.cityCell = [[UITableViewCell alloc] init];
     self.cityCell.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
     
+    
+    
+    
+    
     self.stateCell = [[UITableViewCell alloc] init];
     self.stateCell.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
     
@@ -216,7 +221,9 @@
     
     self.phoneCell.textLabel.text = course[@"phone"];
     [self.phoneCell addSubview:self.nameText];
+
     
+
     self.webCell.textLabel.text = course[@"website"];
     [self.webCell addSubview:self.nameText];
     
@@ -324,10 +331,6 @@
  {
  return [self.courses count];
  }*/
-
-
-
-
 
 
 
