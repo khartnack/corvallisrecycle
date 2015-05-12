@@ -179,7 +179,7 @@
     UITableViewCell *cell =
     [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
                                     forIndexPath:indexPath];
-    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     NSDictionary *course = self.courses[indexPath.row];
     cell.textLabel.text = course[@"title"];
     
