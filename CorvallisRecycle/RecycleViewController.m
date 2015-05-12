@@ -132,7 +132,7 @@
     [self.navigationController pushViewController:self.businessViewController animated:YES];
 }
 
-- (void)  URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
+/*- (void)  URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
  didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
    completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential *))completionHandler
 {
@@ -141,7 +141,11 @@
                                password:@"AchieveNerdvana"
                             persistence:NSURLCredentialPersistenceForSession];
     completionHandler(NSURLSessionAuthChallengeUseCredential, cred);
+}*/
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
+{
+    
+    
 }
-
-
 @end

@@ -139,10 +139,7 @@
     
     self.cityCell = [[UITableViewCell alloc] init];
     self.cityCell.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
-    
-    
-    
-    
+
     
     self.stateCell = [[UITableViewCell alloc] init];
     self.stateCell.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
@@ -246,7 +243,7 @@
 }
 
 
-
+/*
 - (void)  URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
  didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
    completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential *))completionHandler
@@ -256,6 +253,12 @@
                                password:@"AchieveNerdvana"
                             persistence:NSURLCredentialPersistenceForSession];
     completionHandler(NSURLSessionAuthChallengeUseCredential, cred);
+}*/
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
+{
+    
+    
 }
 
 
