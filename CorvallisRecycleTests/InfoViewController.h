@@ -1,5 +1,5 @@
 //
-//  BNRQuizViewControler.h
+//  InfoViewControler.h
 //  CorvallisRecycle
 //
 //  Created by Dave Beltramini on 5/6/15.
@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface BNRQuizViewController : UIViewController
+@interface InfoViewController : UIViewController
 
 
 @end

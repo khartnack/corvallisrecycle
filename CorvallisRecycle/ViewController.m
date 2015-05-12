@@ -22,7 +22,7 @@
 @end
 
 @implementation ViewController
-@synthesize BNRQuizViewController;
+@synthesize infoViewController;
 
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
@@ -55,7 +55,7 @@
 -(void)home{
     
     NSLog(@"navigation call for info");
-    [self.navigationController pushViewController:BNRQuizViewController animated:YES];
+    [self.navigationController pushViewController:infoViewController animated:YES];
 }
 
 

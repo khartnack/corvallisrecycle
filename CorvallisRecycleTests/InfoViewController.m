@@ -1,5 +1,5 @@
 //
-//  BNRQuizViewControler.m
+//  InfoViewController.m
 //  CorvallisRecycle
 //
 //  Created by Dave Beltramini on 5/6/15.
@@ -13,21 +13,18 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 
-@interface UIViewController ()
+@interface InfoViewController ()
 @property (nonatomic, weak) IBOutlet UILabel *recycleTitle;
 @property (nonatomic, weak) IBOutlet UITextView *recycleText;
 @property (nonatomic, weak) IBOutlet UIImage *recycleImage;
 @property (nonatomic, weak) IBOutlet UILabel *recycleCorvallis;
-
-
-//@property (nonatomic) UIView *blockView;
 @property (nonatomic) NSArray *dataArray;
-//@property (nonatomic) UITableView *tableView;
+
 
 @end
 
 
-@implementation BNRQuizViewController
+@implementation InfoViewController
 
 
 

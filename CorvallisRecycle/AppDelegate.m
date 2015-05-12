@@ -39,8 +39,8 @@
     ItemViewController *wvc = [[ItemViewController alloc] init];
     cvc.itemViewController = wvc;
     
-    BNRQuizViewController *bnr = [[BNRQuizViewController alloc] init];
-    cvc.BNRQuizViewController = bnr;
+    InfoViewController *bnr = [[InfoViewController alloc] init];
+    cvc.infoViewController = bnr;
     
     RecycleViewController *rvc = [[RecycleViewController alloc] init];
     wvc.recycleViewController = rvc;
