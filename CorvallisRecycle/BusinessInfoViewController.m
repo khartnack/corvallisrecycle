@@ -18,7 +18,7 @@
 @interface BusinessInfoViewController () <NSURLSessionDelegate>
 
 @property (nonatomic, strong) NSURLSession *session;
-@property (nonatomic, strong) NSArray *courses;
+@property (nonatomic, strong) NSArray *infos;
 @property (strong, nonatomic) UITableViewCell *nameCell;
 @property (strong, nonatomic) UITableViewCell *addressCell;
 @property (strong, nonatomic) UITableViewCell *cityCell;
@@ -87,9 +87,9 @@
                                                                     options:0
                                                                       error:&err];
          
-         self.courses = jsonObject[@"courses"];
+         self.infos = jsonObject[@"courses"];
          
-         NSLog(@"courses -->%@", self.courses);
+         NSLog(@"courses -->%@", self.infos);
          
          dispatch_async(dispatch_get_main_queue(), ^{
              [self.tableView reloadData];
@@ -164,30 +164,30 @@
     
     //NSLog(@"--%@",courses);
     
-    NSDictionary *course = self.courses[_indexPath.row];
-    self.nameCell.textLabel.text = course[@"title"];
+    NSDictionary *info = self.infos[_indexPath.row];
+    self.nameCell.textLabel.text = info[@"title"];
     [self.nameCell addSubview:self.nameText];
-    self.addressCell.textLabel.text = course[@"address"];
+    self.addressCell.textLabel.text = info[@"address"];
     [self.addressCell addSubview:self.nameText];
     
-    self.cityCell.textLabel.text = course[@"city"];
+    self.cityCell.textLabel.text = info[@"city"];
     [self.cityCell addSubview:self.cityText];
     
-    self.stateCell.textLabel.text = course[@"state"];
+    self.stateCell.textLabel.text = info[@"state"];
     [self.stateCell addSubview:self.stateText];
     
-    self.zipCell.textLabel.text = course[@"zip"];
+    self.zipCell.textLabel.text = info[@"zip"];
     [self.zipCell addSubview:self.nameText];
     
-    self.phoneCell.textLabel.text = course[@"phone"];
+    self.phoneCell.textLabel.text = info[@"phone"];
     [self.phoneCell addSubview:self.nameText];
 
     
 
-    self.webCell.textLabel.text = course[@"website"];
+    self.webCell.textLabel.text = info[@"website"];
     [self.webCell addSubview:self.nameText];
     
-    self.noteCell.textLabel.text = course[@"notes"];
+    self.noteCell.textLabel.text = info[@"notes"];
     [self.noteCell addSubview:self.nameText];
     switch(indexPath.section)
     {
