@@ -13,7 +13,7 @@
 @class RecycleViewController;
 @class BusinessViewController;
 @class BusinessInfoViewController;
-@interface ViewController : UITableViewController //{BNRQuizViewController *BNRQuizViewController;}
+@interface ViewController : UITableViewController 
 @property (nonatomic, strong) ItemViewController *itemViewController;
 @property(nonatomic,retain) InfoViewController *infoViewController;
 @property(nonatomic,retain) RecycleViewController  *recycleViewController;

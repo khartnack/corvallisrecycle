@@ -5,13 +5,12 @@
 //  Created by Dave Beltramini on 5/6/15.
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
 //
-//github
 //  AppDelegate.m
 //  TableMain
 //
 //  Created by Dave Beltramini on 4/29/15.
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
-//change
+
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "ItemViewController.h"

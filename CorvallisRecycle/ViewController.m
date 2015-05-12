@@ -17,7 +17,7 @@
 @interface ViewController () <NSURLSessionDelegate>
 
 @property (nonatomic, strong) NSURLSession *session;
-@property (nonatomic, copy) NSArray *courses;
+@property (nonatomic, copy) NSArray *categories;
 
 @end
 
@@ -62,7 +62,6 @@
 - (void)fetchFeed
 {
     
-    //https://bookapi.bignerdranch.com/private/courses.json
     NSString *requestString = @"http://web.engr.oregonstate.edu/~beltramk/cs496/nerdranch5";
     NSURL *url = [NSURL URLWithString:requestString];
     NSURLRequest *req = [NSURLRequest requestWithURL:url  cachePolicy:NSURLRequestReloadIgnoringCacheData
@@ -76,9 +75,9 @@
          NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data
                                                                     options:0
                                                                       error:nil];
-         self.courses = jsonObject[@"courses"];
+         self.categories = jsonObject[@"courses"];
          
-         NSLog(@"%@", self.courses);
+         NSLog(@"%@", self.categories);
          
          dispatch_async(dispatch_get_main_queue(), ^{
              [self.tableView reloadData];
@@ -89,7 +88,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.courses count];
+    return [self.categories count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,8 +97,8 @@
     [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
                                     forIndexPath:indexPath];
     
-    NSDictionary *course = self.courses[indexPath.row];
-    cell.textLabel.text = course[@"title"];
+    NSDictionary *category = self.categories[indexPath.row];
+    cell.textLabel.text = category[@"title"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
@@ -108,12 +107,12 @@
 {
     
     //NSLog(@"called");
-    NSDictionary *course = self.courses[indexPath.row];
-    NSURL *URL = [NSURL URLWithString:course[@"url"]];
+    NSDictionary *category = self.categories[indexPath.row];
+    NSURL *URL = [NSURL URLWithString:category[@"url"]];
     
     NSLog(@"--%@",URL);
     
-    self.itemViewController.title = course[@"title"];
+    self.itemViewController.title = category[@"title"];
     self.itemViewController.URL = URL;
     
     [self.navigationController pushViewController:self.itemViewController
