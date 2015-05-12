@@ -19,11 +19,9 @@
 @class ItemViewController;
 @class BusinessViewController;
 @class BusinessInfoViewController;
-//@interface BusinessInfoViewController : UIViewController
 @interface BusinessInfoViewController : UITableViewController
 
 @property (nonatomic, strong) NSURL                 *URL;
 
-//@property (nonatomic,retain) BusinessViewController  *businessViewController;
 @property (nonatomic, retain) BusinessInfoViewController *businessInfoViewController;
 @end

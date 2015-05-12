@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "ItemViewController.h"
-#import "BNRQuizViewController.h"
+#import "InfoViewController.h"
 #import "BusinessViewController.h"
 #import "BusinessInfoViewController.h"
 

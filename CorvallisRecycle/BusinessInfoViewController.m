@@ -18,10 +18,7 @@
 @interface BusinessInfoViewController () <NSURLSessionDelegate>
 
 @property (nonatomic, strong) NSURLSession *session;
-//@property (nonatomic, strong) NSURL *urls;
 @property (nonatomic, strong) NSArray *courses;
-//@property (nonatomic, copy) NSArray *courses;
-//@property (nonatomic, copy) NSData *data;
 @property (strong, nonatomic) UITableViewCell *nameCell;
 @property (strong, nonatomic) UITableViewCell *addressCell;
 @property (strong, nonatomic) UITableViewCell *cityCell;
@@ -56,7 +53,6 @@
         _session = [NSURLSession sessionWithConfiguration:config
                                                  delegate:self
                                             delegateQueue:nil];
-        // _courses = [NSArray alloc];
         
     }
     return self;
@@ -86,15 +82,11 @@
      ^(NSData *data, NSURLResponse *response, NSError *error) {
          
          
-         //NSLog(@"data -->%@", data);
          NSError *err = nil;
          NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data
                                                                     options:0
                                                                       error:&err];
          
-         // NSLog(@"err %@",err);
-         
-         //NSLog(@"jsonObject -->%@", jsonObject);
          self.courses = jsonObject[@"courses"];
          
          NSLog(@"courses -->%@", self.courses);
@@ -112,34 +104,9 @@
     [super viewDidLoad];
     
     NSLog(@"viewdidload");
-    
-    
-    
-    
-    /* self.nameCell = [[UITableViewCell alloc] init];
-     self.nameCell.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
-     
-     self.cityCell = [[UITableViewCell alloc] init];
-     self.cityCell.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
-     //NSLog(@"--%@",courses);
-     
-     NSDictionary *course = self.courses[_indexPath.row];
-     // NSData *data = [stringJson dataUsingEncoding:NSUTF8StringEncoding];
-     //NSDictionary *course = [NSJSONSerialization JSONObjectWithData:_data options:kNilOptions error:&error];
-     self.nameCell.textLabel.text = @"Corvallis Reuse";
-     //self.nameText.text = course[@"title"];
-     [self.nameCell addSubview:self.cityText];
-     //cell.textLabel.text = course[@"title"];
-     self.cityCell.textLabel.text = course[@"city"];
-     //self.cityCell.textLabel.text = @"Corvallis";
-     [self.cityCell addSubview:self.cityText]; */
-    
     NSLog(@"--%@",self.cityCell.textLabel.text);
     
-    
-    // [self.tableView registerClass:[UITableViewCell class]
-    //        forCellReuseIdentifier:@"UITableViewCell"];
-}
+    }
 
 
 //KB: Return the number of sections
@@ -163,9 +130,6 @@
 // Return the row for the corresponding section and row
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //UITableViewCell *cell =
-    // [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
-    //                              forIndexPath:indexPath];
     
     self.nameCell = [[UITableViewCell alloc] init];
     self.nameCell.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
@@ -201,10 +165,6 @@
     //NSLog(@"--%@",courses);
     
     NSDictionary *course = self.courses[_indexPath.row];
-    // NSData *data = [stringJson dataUsingEncoding:NSUTF8StringEncoding];
-    //NSDictionary *course = [NSJSONSerialization JSONObjectWithData:_data options:kNilOptions error:&error];
-    
-    //self.nameCell.textLabel.text = @"Corvallis Reuse";
     self.nameCell.textLabel.text = course[@"title"];
     [self.nameCell addSubview:self.nameText];
     self.addressCell.textLabel.text = course[@"address"];
@@ -259,28 +219,6 @@
     }
     return nil;
 }
-/*
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
- {
- UITableViewCell *cell =
- [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
- forIndexPath:indexPath];
- 
- self.nameCell = [[UITableViewCell alloc] init];
- self.nameCell.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
- 
- 
- self.cityCell = [[UITableViewCell alloc] init];
- self.cityCell.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
- 
- NSDictionary *course = self.courses[indexPath.row];
- self.nameCell.textLabel.text = @"Katie";
- [self.nameCell addSubview:self.cityText];
- self.cityCell.textLabel.text = course[@"city"];
- [self.cityCell addSubview:self.cityText];
- 
- return cell;
- }*/
 
 // Customize the section headings for each section
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -294,22 +232,6 @@
     return nil;
 }
 
-/*
- // Configure the row selection code for any cells that you want to customize the row selection
- - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Handle social cell selection to toggle checkmark
- if(indexPath.section == 1 && indexPath.row == 0) {
- 
- // deselect row
- [tableView deselectRowAtIndexPath:indexPath animated:false];
- 
- 
- }
- }*/
-
-
-
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -322,18 +244,6 @@
     [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
     // Release anything that's not essential, such as cached data
 }
-
-
-
-
-/*
- - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
- {
- return [self.courses count];
- }*/
-
-
-
 
 
 

@@ -35,7 +35,6 @@
                                                  delegate:self
                                             delegateQueue:nil];
         
-        //[self fetchFeed];
     }
     return self;
 }
@@ -48,25 +47,9 @@
     
     if (_URL) {
         [self fetchFeed];
-        //NSURLRequest *req = [NSURLRequest requestWithURL:_URL];
-        //NSLog(@"loadRequest: %@", req);
-        //[(UIWebView *)self.view loadRequest:req];
+      
     }
 }
-
-
-
-/*
- Implement loadView if you want to create a view hierarchy programmatically
- - (void)loadView {
- }
- */
-
-/*
- If you need to do additional setup after loading the view, override viewDidLoad.
- - (void)viewDidLoad {
- }
- */
 
 
 - (void)viewDidLoad
@@ -91,53 +74,9 @@
 
 
 
-/*- (instancetype)initWithStyle:(UITableViewStyle)style
- {
- // self = [super init];
- if (self) {
- self.navigationItem.title = @"Categories";
- 
- NSURLSessionConfiguration *config =
- [NSURLSessionConfiguration defaultSessionConfiguration];
- 
- _session = [NSURLSession sessionWithConfiguration:config
- delegate:self
- delegateQueue:nil];
- 
- [self fetchFeed];
- }
- return self;
- 
- }*/
-
-//test
-
-//- (void)setURL:(NSURL *)URL
-//{
-//   _URL = URL;
-// if (_URL) {
-//     NSURLRequest *req = [NSURLRequest requestWithURL:_URL];
-//    NSLog(@"loadRequest: %@", req);
-//   [(UIWebView *)self.view loadRequest:req];
-//}
-//}
 
 - (void)fetchFeed
 {
-    
-    //NSURL *url = [NSURL url:self.URL options:nil];
-    //https://bookapi.bignerdranch.com/private/courses.json
-    //     NSString *requestString = @"http://web.engr.oregonstate.edu/~beltramk/cs496/nerdranch2";
-    //
-    //
-    //
-    //    NSURL *url = [NSURL URLWithString:requestString];
-    //
-    //
-    //
-    //
-    //
-    //    NSURLRequest *req = [NSURLRequest requestWithURL:url];
     
     NSURLRequest *req = [NSURLRequest requestWithURL:_URL cachePolicy:NSURLRequestReloadIgnoringCacheData
                                      timeoutInterval:60.0];
@@ -209,29 +148,6 @@
     completionHandler(NSURLSessionAuthChallengeUseCredential, cred);
 }
 
-/*
- //if you want a url to load for each item, this works
- 
- - (void)loadView
- {
- UIWebView *webView = [[UIWebView alloc] init];
- webView.scalesPageToFit = YES;
- self.view = webView;
- }
- 
- - (void)setURL:(NSURL *)URL
- {
- _URL = URL;
- if (_URL) {
- NSURLRequest *req = [NSURLRequest requestWithURL:_URL];
- NSLog(@"loadRequest: %@", req);
- [(UIWebView *)self.view loadRequest:req];
- }
- }
- 
- @end
- 
- */
 
 
 @end
