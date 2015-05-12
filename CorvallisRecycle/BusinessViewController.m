@@ -55,6 +55,12 @@
 {
     [super viewDidLoad];
     NSLog(@"viewdidload");
+    
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Map" style: UIBarButtonItemStylePlain    target:self action:@selector(map)];
+    //  UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Info" style: UIBarButtonItemStylePlain    target:self action:nil];
+    self.navigationItem.rightBarButtonItem = backButton;
+    
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
 }
@@ -70,7 +76,13 @@
     // Release anything that's not essential, such as cached data
 }
 
-
+-(void)map{
+    
+    NSLog(@"navigation call for map");
+ 
+    
+    
+}
 
 - (void)fetchFeed
 {

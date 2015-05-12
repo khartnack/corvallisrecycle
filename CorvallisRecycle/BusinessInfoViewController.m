@@ -111,6 +111,10 @@
     [super viewDidLoad];
     
     NSLog(@"viewdidload");
+    
+    
+    
+    
     /* self.nameCell = [[UITableViewCell alloc] init];
      self.nameCell.backgroundColor = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.5f];
      

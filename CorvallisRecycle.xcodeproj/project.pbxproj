@@ -11,6 +11,8 @@
 		832E7E151AFA898D000D73CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832E7E141AFA898D000D73CD /* UIKit.framework */; };
 		832E7E171AFA899D000D73CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832E7E161AFA899D000D73CD /* Foundation.framework */; };
 		832E7E191AFA89C9000D73CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832E7E181AFA89C9000D73CD /* CoreGraphics.framework */; };
+		8391A5881B027395005A7D8E /* recycle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8391A5871B027395005A7D8E /* recycle.jpg */; };
+		8391A58A1B027A7C005A7D8E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8391A5891B027A7C005A7D8E /* icon.png */; };
 		83BE26F31AFA7E0800D92361 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BE26F21AFA7E0800D92361 /* main.m */; };
 		83BE26F61AFA7E0900D92361 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BE26F51AFA7E0900D92361 /* AppDelegate.m */; };
 		83BE26F91AFA7E0900D92361 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BE26F81AFA7E0900D92361 /* ViewController.m */; };
@@ -49,6 +51,8 @@
 		832E7E141AFA898D000D73CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		832E7E161AFA899D000D73CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		832E7E181AFA89C9000D73CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8391A5871B027395005A7D8E /* recycle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recycle.jpg; sourceTree = "<group>"; };
+		8391A5891B027A7C005A7D8E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		83BE26ED1AFA7E0800D92361 /* CorvallisRecycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorvallisRecycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BE26F11AFA7E0800D92361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BE26F21AFA7E0800D92361 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 				83BE27201AFA7FD200D92361 /* BusinessInfoViewController.m */,
 				83BE26FA1AFA7E0900D92361 /* Main.storyboard */,
 				83BE26FD1AFA7E0900D92361 /* Images.xcassets */,
+				8391A5891B027A7C005A7D8E /* icon.png */,
+				8391A5871B027395005A7D8E /* recycle.jpg */,
 				83BE272E1AFA821700D92361 /* BNRQuizViewController.h */,
 				83BE272F1AFA821700D92361 /* BNRQuizViewController.m */,
 				832E7E0B1AFA8656000D73CD /* BNRQuizViewController.xib */,
@@ -256,7 +262,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8391A58A1B027A7C005A7D8E /* icon.png in Resources */,
 				832E7E0C1AFA8656000D73CD /* BNRQuizViewController.xib in Resources */,
+				8391A5881B027395005A7D8E /* recycle.jpg in Resources */,
 				83BE26FC1AFA7E0900D92361 /* Main.storyboard in Resources */,
 				83BE27011AFA7E0900D92361 /* LaunchScreen.xib in Resources */,
 				83BE26FE1AFA7E0900D92361 /* Images.xcassets in Resources */,
