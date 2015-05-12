@@ -17,29 +17,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don’t Throw That Good Stuff Away!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90W-AJ-PcM">
-                    <rect key="frame" x="61" y="115" width="281" height="30"/>
+                    <rect key="frame" x="61" y="114" width="281" height="30"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhQ-PI-3uN">
-                    <rect key="frame" x="110" y="411" width="175" height="38"/>
-                    <color key="backgroundColor" red="0.9789930697306658" green="0.99646859217171713" blue="0.69610506599193767" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="Curbside Containers">
-                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="curbsideRecycle:" destination="-1" eventType="touchUpInside" id="WXK-2n-DFq"/>
-                    </connections>
-                </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08w-UF-clM">
-                    <rect key="frame" x="53" y="160" width="297" height="179"/>
+                    <rect key="frame" x="49" y="166" width="297" height="179"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" none="YES" link="YES"/>
                     </accessibility>
-                    <string key="text">Use the  Corvallis-Area 
-ReUse Directory
+                    <string key="text">Use the  Corvallis Reuse and Repair Directory
 
 Always Call First to Confirm which items are currently accepted.
 
@@ -54,6 +43,16 @@ Always Call First to Confirm which items are currently accepted.
                     <state key="normal" title="Items Accepted"/>
                     <connections>
                         <action selector="itemsRecycle:" destination="-1" eventType="touchUpInside" id="ZQi-o0-GJV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhQ-PI-3uN">
+                    <rect key="frame" x="110" y="411" width="175" height="38"/>
+                    <color key="backgroundColor" red="0.9789930697306658" green="0.99646859217171713" blue="0.69610506599193767" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Curbside Containers">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="curbsideRecycle:" destination="-1" eventType="touchUpInside" id="WXK-2n-DFq"/>
                     </connections>
                 </button>
             </subviews>

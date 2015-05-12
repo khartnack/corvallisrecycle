@@ -115,6 +115,16 @@
  
  */
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        // Initialization code
+        self.navigationItem.title = @"Corvallis Reuse and Repair Directory";
+
+        
+    }
+    return self;
+}
+
 - (IBAction)itemsRecycle:(id)sender
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://site.republicservices.com/site/corvallis-or/en/documents/corvallisrecycledepot.pdf"]];
