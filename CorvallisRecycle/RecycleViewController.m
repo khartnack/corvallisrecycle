@@ -15,7 +15,7 @@
 @interface RecycleViewController () <NSURLSessionDelegate>
 
 @property (nonatomic, strong) NSURLSession *session;
-@property (nonatomic, copy) NSArray *courses;
+@property (nonatomic, copy) NSArray *recycles;
 
 
 @end
@@ -92,10 +92,10 @@
          NSLog(@"err %@",err);
          
          NSLog(@"jsonObject -->%@", jsonObject);
-         self.courses = jsonObject[@"courses"];
+         self.recycles = jsonObject[@"courses"];
          
          
-         NSLog(@"courses -->%@", self.courses);
+         NSLog(@"courses -->%@", self.recycles);
          
          dispatch_async(dispatch_get_main_queue(), ^{
              [self.tableView reloadData];
@@ -106,7 +106,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.courses count];
+    return [self.recycles count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -115,18 +115,18 @@
     [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
                                     forIndexPath:indexPath];
     
-    NSDictionary *course = self.courses[indexPath.row];
-    cell.textLabel.text = course[@"title"];
+    NSDictionary *recycle = self.recycles[indexPath.row];
+    cell.textLabel.text = recycle[@"title"];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *course = self.courses[indexPath.row];
-    NSURL *URL = [NSURL URLWithString:course[@"url"]];
+    NSDictionary *recycle = self.recycles[indexPath.row];
+    NSURL *URL = [NSURL URLWithString:recycle[@"url"]];
     
-    self.businessViewController.title = course[@"title"];
+    self.businessViewController.title = recycle[@"title"];
     self.businessViewController.URL = URL;
     NSLog(@"--%@",URL);
     [self.navigationController pushViewController:self.businessViewController animated:YES];

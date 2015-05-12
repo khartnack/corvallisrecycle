@@ -16,7 +16,7 @@
 @interface BusinessViewController () <NSURLSessionDelegate>
 
 @property (nonatomic, strong) NSURLSession *session;
-@property (nonatomic, copy) NSArray *courses;
+@property (nonatomic, copy) NSArray *businesses;
 
 
 @end
@@ -58,7 +58,7 @@
     
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Map" style: UIBarButtonItemStylePlain    target:self action:@selector(map)];
-    //  UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Info" style: UIBarButtonItemStylePlain    target:self action:nil];
+
     self.navigationItem.rightBarButtonItem = backButton;
     
     [self.tableView registerClass:[UITableViewCell class]
@@ -105,10 +105,10 @@
          NSLog(@"err %@",err);
          
          NSLog(@"jsonObject -->%@", jsonObject);
-         self.courses = jsonObject[@"courses"];
+         self.businesses = jsonObject[@"courses"];
          
          
-         NSLog(@"courses -->%@", self.courses);
+         NSLog(@"courses -->%@", self.businesses);
          
          dispatch_async(dispatch_get_main_queue(), ^{
              [self.tableView reloadData];
@@ -119,7 +119,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.courses count];
+    return [self.businesses count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,8 +128,8 @@
     [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
                                     forIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    NSDictionary *course = self.courses[indexPath.row];
-    cell.textLabel.text = course[@"title"];
+    NSDictionary *business = self.businesses[indexPath.row];
+    cell.textLabel.text = business[@"title"];
     
     return cell;
 }
@@ -137,10 +137,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *course = self.courses[indexPath.row];
-    NSURL *URL = [NSURL URLWithString:course[@"url"]];
+    NSDictionary *business = self.businesses[indexPath.row];
+    NSURL *URL = [NSURL URLWithString:business[@"url"]];
     
-    self.businessInfoViewController.title = course[@"title"];
+    self.businessInfoViewController.title = business[@"title"];
     self.businessInfoViewController.URL = URL;
     NSLog(@"--%@",URL);
     [self.navigationController pushViewController:self.businessInfoViewController

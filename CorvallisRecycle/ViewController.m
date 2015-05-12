@@ -64,8 +64,8 @@
     
     NSString *requestString = @"http://web.engr.oregonstate.edu/~beltramk/cs496/nerdranch5";
     NSURL *url = [NSURL URLWithString:requestString];
-    NSURLRequest *req = [NSURLRequest requestWithURL:url  cachePolicy:NSURLRequestReloadIgnoringCacheData
-                                     timeoutInterval:60.0];
+    NSURLRequest *req = [NSURLRequest requestWithURL:url  cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
+   
     
     NSURLSessionDataTask *dataTask =
     [self.session dataTaskWithRequest:req
@@ -84,6 +84,10 @@
          });
      }];
     [dataTask resume];
+    
+
+     
+                               
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -134,6 +138,8 @@
     completionHandler(NSURLSessionAuthChallengeUseCredential, cred);
     
 }
+
+
 
 @end
 
