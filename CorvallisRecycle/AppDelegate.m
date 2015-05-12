@@ -32,14 +32,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    
-    
-    //NSLog(@"breakpoint");
     ViewController *cvc = [[ViewController alloc] init];
-    //ItemViewController *ivc = [[ItemViewController alloc] init];
-    //RecycleViewController *rcvc = [[RecycleViewController alloc] init];
-    
+
     
     //need to alloc a controller for each view here
     ItemViewController *wvc = [[ItemViewController alloc] init];
@@ -69,11 +63,7 @@
                                                            [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
                                                            shadow, NSShadowAttributeName,
                                                            [UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:21.0], NSFontAttributeName, nil]];
-    /* UIBarButtonItem *cameraItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:nil];
-     
-     NSArray *actionButtonItems = @[cameraItem];
-     self.navigationItem.rightBarButtonItems = actionButtonItems;*/
-    
+
     
     self.window.rootViewController = masterNav;
     

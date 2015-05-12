@@ -48,39 +48,15 @@
     
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
-    
-    
-    
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Info" style: UIBarButtonItemStylePlain    target:self action:@selector(home)];
-    //  UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Info" style: UIBarButtonItemStylePlain    target:self action:nil];
     self.navigationItem.leftBarButtonItem = backButton;
-    
-    /* if(backButton.BNRQuizViewController == nil) {
-     BNRQuizViewController  *view2 = [[BNRQuizViewController  alloc] initWithNibName:@"View2" bundle:[NSBundle mainBundle]];
-     self.BNRQuizViewController  = view2;
-     // [view2 release];
-     }
-     //test
-     [self.navigationController pushViewController:self.BNRQuizViewController animated:YES];*/
-    
-    /*UIBarButtonItem *cameraItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:nil];
-     
-     NSArray *actionButtonItems = @[cameraItem];
-     self.navigationItem.rightBarButtonItems = actionButtonItems;*/
-    
-    
 }
 
 -(void)home{
     
     NSLog(@"navigation call for info");
     [self.navigationController pushViewController:BNRQuizViewController animated:YES];
-    
-    
-    
 }
-
-
 
 
 - (void)fetchFeed
@@ -155,7 +131,6 @@
     NSURLCredential *cred =
     [NSURLCredential credentialWithUser:@"BigNerdRanch"
                                password:@"AchieveNerdvana"
-     //                           persistence:NSURLCredentialPersistenceNone];
                             persistence:NSURLCredentialPersistenceForSession];
     completionHandler(NSURLSessionAuthChallengeUseCredential, cred);
     
