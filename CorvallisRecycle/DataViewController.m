@@ -35,6 +35,7 @@
 @property (weak, nonatomic) NSString *ZipDataText;
 @property (weak, nonatomic) NSString *WSDataText;
 @property (weak, nonatomic) NSString *NotesDataText;
+@property (weak, nonatomic) NSString *PhoneDataText;
 
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *NameData;
@@ -52,7 +53,7 @@
 @synthesize ZipDataText;
 @synthesize WSDataText;
 @synthesize NotesDataText;
-
+@synthesize PhoneDataText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -123,6 +124,14 @@
              NSLog(@"----");
              NSLog(@"Title: %@", theCourse[@"title"] );
              self.NameDataText = theCourse[@"title"];
+             self.AddressDataText = theCourse[@"address"];
+             self.CityDataText = theCourse[@"city"];
+             self.StateDataText = theCourse[@"state"];
+             self.ZipDataText = theCourse[@"zip"];
+             self.PhoneDataText = theCourse[@"phone"];
+             self.WSDataText = theCourse[@"website"];
+             self.NotesDataText = theCourse[@"notes"];
+      
              
              NSLog(@"----");
          }
@@ -141,6 +150,9 @@
   
     [super viewWillAppear:animated];
     self.NameData.text = self.NameDataText;
+    self.CityData.text = self.CityDataText;
+    self.StreetData.text = self.AddressDataText;
+    self.StateData.text = self.StateDataText;
     
 //- (void)viewDidLoad {
   
