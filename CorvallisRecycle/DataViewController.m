@@ -17,15 +17,17 @@
 
 @interface DataViewController () <NSURLSessionDelegate>
 
+@property (weak, nonatomic) NSString *NameDataText;
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *NameData;
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, copy) NSArray *businesses;
-
+@property (nonatomic, copy) NSArray *courses;
+@property (nonatomic, strong) NSDictionary *theCourse;
 @end
 
 @implementation DataViewController
-
+@synthesize NameDataText;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -41,8 +43,8 @@
         _session = [NSURLSession sessionWithConfiguration:config
                                                  delegate:self
                                             delegateQueue:nil];
-        
-   
+        _URL = URL;
+    
         
     }
     return self;
@@ -51,14 +53,11 @@
 }
 
 
-
-
-
 /*
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}*/
+ - (void)didReceiveMemoryWarning {
+ [super didReceiveMemoryWarning];
+ // Dispose of any resources that can be recreated.
+ }*/
 
 - (void)setURL:(NSURL *)URL
 {
@@ -74,10 +73,10 @@
 
 - (void)fetchFeed
 {
- 
     
+  
     NSLog(@"--%@",_URL);
-     NSLog(@"fetch feed");
+    NSLog(@"fetch feed");
     NSURLRequest *req = [NSURLRequest requestWithURL:_URL cachePolicy:NSURLRequestReloadIgnoringCacheData
                                      timeoutInterval:60.0];
     NSLog(@"jsonObject -->%@", _URL);
@@ -99,26 +98,40 @@
          {
              NSLog(@"----");
              NSLog(@"Title: %@", theCourse[@"title"] );
-             self.NameData = theCourse[@"title"];
-
+             self.NameDataText = theCourse[@"title"];
+             
              NSLog(@"----");
          }
          
-         dispatch_async(dispatch_get_main_queue(), ^{
+     dispatch_async(dispatch_get_main_queue(), ^{
          
+        
          });
      }];
     [dataTask resume];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
 
+-(void)viewWillAppear:(BOOL)animated
+{
+  
+    [super viewWillAppear:animated];
+    self.NameData.text = self.NameDataText;
+    
+//- (void)viewDidLoad {
+  
+   // self.NameData = _NameData;
 
-    NSLog(@"HERE");
-
+  //    [super viewDidLoad];
     // Do any additional setup after loading the view frm its nib.
+    NSLog(@"HERE2");
+ //   [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+    
+    //}];
+    
+    
 }
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
