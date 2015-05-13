@@ -181,6 +181,11 @@
     
 }
 
+-(IBAction)callPhone:(id)sender {
+    NSLog(@"--open url%@",self.WSDataText);
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@", self.PhoneDataText]]];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
