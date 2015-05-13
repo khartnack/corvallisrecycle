@@ -19,6 +19,7 @@
 @class ItemViewController;
 @class BusinessViewController;
 @class BusinessInfoViewController;
+@class DataViewController;
 @interface BusinessInfoViewController : UITableViewController
 
 @property (nonatomic, strong) NSURL                 *URL;

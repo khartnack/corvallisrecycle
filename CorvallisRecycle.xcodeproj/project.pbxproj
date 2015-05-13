@@ -11,6 +11,8 @@
 		832E7E151AFA898D000D73CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832E7E141AFA898D000D73CD /* UIKit.framework */; };
 		832E7E171AFA899D000D73CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832E7E161AFA899D000D73CD /* Foundation.framework */; };
 		832E7E191AFA89C9000D73CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832E7E181AFA89C9000D73CD /* CoreGraphics.framework */; };
+		8344E8751B02C91B00C01F8C /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8344E8731B02C91B00C01F8C /* DataViewController.m */; };
+		8344E8761B02C91B00C01F8C /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8344E8741B02C91B00C01F8C /* DataViewController.xib */; };
 		8391A5881B027395005A7D8E /* recycle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8391A5871B027395005A7D8E /* recycle.jpg */; };
 		8391A58A1B027A7C005A7D8E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8391A5891B027A7C005A7D8E /* icon.png */; };
 		83BE26F31AFA7E0800D92361 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BE26F21AFA7E0800D92361 /* main.m */; };
@@ -44,6 +46,9 @@
 		832E7E141AFA898D000D73CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		832E7E161AFA899D000D73CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		832E7E181AFA89C9000D73CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8344E8721B02C91B00C01F8C /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		8344E8731B02C91B00C01F8C /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		8344E8741B02C91B00C01F8C /* DataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
 		8391A5871B027395005A7D8E /* recycle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recycle.jpg; sourceTree = "<group>"; };
 		8391A5891B027A7C005A7D8E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		83BE26ED1AFA7E0800D92361 /* CorvallisRecycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorvallisRecycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +140,9 @@
 				832E7E0B1AFA8656000D73CD /* InfoViewController.xib */,
 				83BE26FF1AFA7E0900D92361 /* LaunchScreen.xib */,
 				83BE26F01AFA7E0800D92361 /* Supporting Files */,
+				8344E8721B02C91B00C01F8C /* DataViewController.h */,
+				8344E8731B02C91B00C01F8C /* DataViewController.m */,
+				8344E8741B02C91B00C01F8C /* DataViewController.xib */,
 			);
 			path = CorvallisRecycle;
 			sourceTree = "<group>";
@@ -256,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8391A58A1B027A7C005A7D8E /* icon.png in Resources */,
+				8344E8761B02C91B00C01F8C /* DataViewController.xib in Resources */,
 				832E7E0C1AFA8656000D73CD /* InfoViewController.xib in Resources */,
 				8391A5881B027395005A7D8E /* recycle.jpg in Resources */,
 				83BE26FC1AFA7E0900D92361 /* Main.storyboard in Resources */,
@@ -282,6 +291,7 @@
 				83FF29D11AFA920B002FB537 /* InfoViewController.xib in Sources */,
 				83BE271E1AFA7FA200D92361 /* BusinessViewController.m in Sources */,
 				83BE271B1AFA7F6D00D92361 /* RecycleViewController.m in Sources */,
+				8344E8751B02C91B00C01F8C /* DataViewController.m in Sources */,
 				83BE26F91AFA7E0900D92361 /* ViewController.m in Sources */,
 				83BE26F61AFA7E0900D92361 /* AppDelegate.m in Sources */,
 				83BE27181AFA7F3400D92361 /* ItemViewController.m in Sources */,

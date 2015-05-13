@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "ItemViewController.h"
 #import "BusinessInfoViewController.h"
+#import "DataViewController.h"
 
 @interface BusinessViewController () <NSURLSessionDelegate>
 
@@ -143,8 +144,9 @@
     self.businessInfoViewController.title = business[@"title"];
     self.businessInfoViewController.URL = URL;
     NSLog(@"--%@",URL);
-    [self.navigationController pushViewController:self.businessInfoViewController
-                                         animated:YES];
+    [self.navigationController pushViewController:self.businessInfoViewController animated:YES];
+   // [self.navigationController pushViewController:self.dataViewController
+     
 }
 
 

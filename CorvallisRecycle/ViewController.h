@@ -13,12 +13,14 @@
 @class RecycleViewController;
 @class BusinessViewController;
 @class BusinessInfoViewController;
+@class DataViewController;
 @interface ViewController : UITableViewController 
 @property (nonatomic, strong) ItemViewController *itemViewController;
 @property(nonatomic,retain) InfoViewController *infoViewController;
 @property(nonatomic,retain) RecycleViewController  *recycleViewController;
 @property(nonatomic,retain) BusinessViewController  *businessViewController;
 @property(nonatomic,retain) BusinessInfoViewController  *businessInfoViewController;
+@property(nonatomic,retain) DataViewController  *dataInfoViewController;
 @property(nonatomic, strong) NSURL *URL;
 @end
 

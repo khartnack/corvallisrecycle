@@ -18,6 +18,7 @@
 #import "RecycleViewController.h"
 #import "BusinessViewController.h"
 #import "BusinessInfoViewController.h"
+#import "DataViewController.h"
 
 
 
@@ -49,6 +50,9 @@
     
     BusinessInfoViewController *bivc = [[BusinessInfoViewController alloc] initWithStyle:UITableViewStyleGrouped];
     bvc.businessInfoViewController = bivc;
+    
+   // DataViewController *dvc = [[DataViewController alloc] init];
+   // bvc.dataViewController = dvc;
     
     UINavigationController *masterNav = [[UINavigationController alloc] initWithRootViewController:cvc];
     
