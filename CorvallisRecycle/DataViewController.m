@@ -172,6 +172,15 @@
     
 }
 
+- (IBAction)viewWebSite:(id)sender
+{
+     NSLog(@"--open url%@",self.WSData.text);
+     NSLog(@"--open url2%@",self.WSDataText);
+   // [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://site.republicservices.com/site/corvallis-or/en/documents/corvallisrecycledepot.pdf"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.WSDataText]];
+    
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
