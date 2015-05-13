@@ -182,7 +182,7 @@
 }
 
 -(IBAction)callPhone:(id)sender {
-    NSLog(@"--open url%@",self.WSDataText);
+    NSLog(@"--open url%@",self.PhoneDataText);
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@", self.PhoneDataText]]];
 }
 
