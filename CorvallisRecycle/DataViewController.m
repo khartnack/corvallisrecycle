@@ -4,7 +4,7 @@
 //
 //  Created by Dave Beltramini on 5/12/15.
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
-//
+//images from: http://www.myiconfinder.com/icon/phone-call-calling-contact-us-tele-telephone-//communication-cell-landline/10348
 
 #import "DataViewController.h"
 
@@ -16,8 +16,26 @@
 #import "BusinessInfoViewController.h"
 
 @interface DataViewController () <NSURLSessionDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *AddressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *PhoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *WebSiteLabel;
+@property (weak, nonatomic) IBOutlet UILabel *NotesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *StreetData;
+@property (weak, nonatomic) IBOutlet UILabel *CityData;
+@property (weak, nonatomic) IBOutlet UILabel *StateData;
+@property (weak, nonatomic) IBOutlet UILabel *ZipData;
+@property (weak, nonatomic) IBOutlet UILabel *PhoneData;
+@property (weak, nonatomic) IBOutlet UILabel *WSData;
+@property (weak, nonatomic) IBOutlet UITextView *NotesData;
 
 @property (weak, nonatomic) NSString *NameDataText;
+@property (weak, nonatomic) NSString *AddressDataText;
+@property (weak, nonatomic) NSString *CityDataText;
+@property (weak, nonatomic) NSString *StateDataText;
+@property (weak, nonatomic) NSString *ZipDataText;
+@property (weak, nonatomic) NSString *WSDataText;
+@property (weak, nonatomic) NSString *NotesDataText;
+
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *NameData;
 @property (nonatomic, strong) NSURLSession *session;
@@ -28,6 +46,12 @@
 
 @implementation DataViewController
 @synthesize NameDataText;
+@synthesize AddressDataText;
+@synthesize CityDataText;
+@synthesize StateDataText;
+@synthesize ZipDataText;
+@synthesize WSDataText;
+@synthesize NotesDataText;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
