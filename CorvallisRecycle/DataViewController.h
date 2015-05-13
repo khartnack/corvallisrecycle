@@ -6,16 +6,24 @@
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
 //
 
+
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "ItemViewController.h"
+#import "RecycleViewController.h"
+#import "BusinessViewController.h"
 
 @class RecycleViewController;
 @class ItemViewController;
 @class BusinessViewController;
 @class BusinessInfoViewController;
 @class DataViewController;
+@class ViewController;
 @interface DataViewController : UIViewController
+//-(void)fetchFeed:(NSURL *)URL;
 @property (nonatomic, strong) NSURL                 *URL;
 @property (nonatomic,retain) DataViewController  *dataViewController;
+@property (nonatomic,retain) BusinessViewController *businessViewController;
 @end

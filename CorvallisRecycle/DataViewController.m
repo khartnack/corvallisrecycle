@@ -19,7 +19,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *NameData;
-
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, copy) NSArray *businesses;
 
@@ -31,9 +30,11 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        NSLog(@"HERE");
         // Initialization code
         self.navigationItem.title = @"Categories";
-        //NSURL *url = self.webViewController.URL;
+        NSURL *URL = self.businessViewController.URL;
+        _URL = URL;
         NSURLSessionConfiguration *config =
         [NSURLSessionConfiguration defaultSessionConfiguration];
         
@@ -41,26 +42,29 @@
                                                  delegate:self
                                             delegateQueue:nil];
         
+   
+        
     }
     return self;
+    
+    
 }
 
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
 
+
+/*
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
+}*/
 
 - (void)setURL:(NSURL *)URL
 {
+    NSLog(@"set url");
     _URL = URL;
-    NSLog(@"--%@",URL);
+    NSLog(@"--URLset%@",URL);
     
     if (_URL) {
         [self fetchFeed];
@@ -70,10 +74,13 @@
 
 - (void)fetchFeed
 {
+ 
     
+    NSLog(@"--%@",_URL);
+     NSLog(@"fetch feed");
     NSURLRequest *req = [NSURLRequest requestWithURL:_URL cachePolicy:NSURLRequestReloadIgnoringCacheData
                                      timeoutInterval:60.0];
-    
+    NSLog(@"jsonObject -->%@", _URL);
     NSURLSessionDataTask *dataTask =
     [self.session dataTaskWithRequest:req
                     completionHandler:
@@ -86,13 +93,12 @@
                                                                       error:&err];
          
          self.businesses = jsonObject[@"courses"];
+         self.NameData= [jsonObject objectForKey:@"title"];
          
-         NSLog(@"courses -->%@", self.businesses);
          
-         for (NSDictionary *business in _businesses) {
-             NSString *icon = [business objectForKey:@"title"];
-             NSLog(@"icon: %@", icon);
-         }
+         NSLog(@"jsonObject -->%@", jsonObject);
+         
+
          dispatch_async(dispatch_get_main_queue(), ^{
         
          });
@@ -100,7 +106,12 @@
     [dataTask resume];
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    NSLog(@"HERE");
 
+    // Do any additional setup after loading the view frm its nib.
+}
 /*
 #pragma mark - Navigation
 

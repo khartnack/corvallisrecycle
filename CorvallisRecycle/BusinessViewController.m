@@ -23,7 +23,7 @@
 @end
 
 @implementation BusinessViewController
-
+@synthesize dataViewController;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -143,9 +143,11 @@
     
     self.businessInfoViewController.title = business[@"title"];
     self.businessInfoViewController.URL = URL;
-    NSLog(@"--%@",URL);
-    [self.navigationController pushViewController:self.businessInfoViewController animated:YES];
-   // [self.navigationController pushViewController:self.dataViewController
+    self.dataViewController.URL = URL;
+   // NSLog(@"--%@",URL);
+  //  [self.navigationController pushViewController:self.businessInfoViewController animated:YES];
+    [self.navigationController pushViewController:self.dataViewController animated:YES];
+
      
 }
 
