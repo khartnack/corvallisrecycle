@@ -93,14 +93,19 @@
                                                                       error:&err];
          
          self.businesses = jsonObject[@"courses"];
-         self.NameData= [jsonObject objectForKey:@"title"];
-         
-         
-         NSLog(@"jsonObject -->%@", jsonObject);
-         
+         //self.NameData= [jsonObject objectForKey:@"title"];
+         NSArray *courses = jsonObject[@"courses"];
+         for ( NSDictionary *theCourse in courses )
+         {
+             NSLog(@"----");
+             NSLog(@"Title: %@", theCourse[@"title"] );
+             self.NameData = theCourse[@"title"];
 
+             NSLog(@"----");
+         }
+         
          dispatch_async(dispatch_get_main_queue(), ^{
-        
+         
          });
      }];
     [dataTask resume];
@@ -108,11 +113,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
     NSLog(@"HERE");
 
     // Do any additional setup after loading the view frm its nib.
 }
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -120,6 +126,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
