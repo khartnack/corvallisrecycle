@@ -153,6 +153,10 @@
     self.CityData.text = self.CityDataText;
     self.StreetData.text = self.AddressDataText;
     self.StateData.text = self.StateDataText;
+    self.ZipData.text = self.ZipDataText;
+    self.WSData.text = self.WSDataText;
+    self.PhoneData.text = self.PhoneDataText;
+    self.NotesData.text = self.NotesDataText;
     
 //- (void)viewDidLoad {
   
