@@ -158,6 +158,7 @@
     self.PhoneData.text = self.PhoneDataText;
     self.NotesData.text = self.NotesDataText;
     
+    //code from: http://quantgreeks.com/convert-a-string-to-phone-number-format-in-objective-cswift/
     NSMutableString *stringts = [NSMutableString stringWithString:self.PhoneData.text];
     [stringts insertString:@"(" atIndex:0];
     [stringts insertString:@")" atIndex:4];
