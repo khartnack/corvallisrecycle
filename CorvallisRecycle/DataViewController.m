@@ -156,7 +156,14 @@
     self.ZipData.text = self.ZipDataText;
     self.WSData.text = self.WSDataText;
     self.PhoneData.text = self.PhoneDataText;
-    self.NotesData.text = self.NotesDataText;
+    
+    NSMutableString *stringts = [NSMutableString stringWithString:self.PhoneData.text];
+    [stringts insertString:@"(" atIndex:0];
+    [stringts insertString:@")" atIndex:4];
+    [stringts insertString:@"-" atIndex:5];
+    [stringts insertString:@"-" atIndex:9];
+    self.PhoneData.text = stringts;
+    //self.NotesData.text = self.NotesDataText;
     
 //- (void)viewDidLoad {
   
