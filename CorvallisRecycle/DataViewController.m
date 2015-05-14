@@ -156,6 +156,7 @@
     self.ZipData.text = self.ZipDataText;
     self.WSData.text = self.WSDataText;
     self.PhoneData.text = self.PhoneDataText;
+    self.NotesData.text = self.NotesDataText;
     
     NSMutableString *stringts = [NSMutableString stringWithString:self.PhoneData.text];
     [stringts insertString:@"(" atIndex:0];
@@ -191,6 +192,7 @@
 -(IBAction)callPhone:(id)sender {
     NSLog(@"--open url%@",self.PhoneDataText);
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@", self.PhoneDataText]]];
+    
 }
 
 #pragma mark - Navigation
