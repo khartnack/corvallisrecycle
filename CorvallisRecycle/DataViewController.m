@@ -59,7 +59,7 @@
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         NSLog(@"HERE");
         // Initialization code
-        self.navigationItem.title = @"Categories";
+        self.navigationItem.title = @"Business Info";
         NSURL *URL = self.businessViewController.URL;
         _URL = URL;
         NSURLSessionConfiguration *config =
@@ -143,7 +143,7 @@
      }];
     [dataTask resume];
 }
-
+//541322575363842
 
 -(void)viewWillAppear:(BOOL)animated
 {

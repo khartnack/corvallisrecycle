@@ -53,6 +53,7 @@
 		8344E8771B03E23200C01F8C /* 16-16-bae1463b4228b5053cf1c9a7986ed827.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "16-16-bae1463b4228b5053cf1c9a7986ed827.png"; sourceTree = "<group>"; };
 		8391A5871B027395005A7D8E /* recycle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recycle.jpg; sourceTree = "<group>"; };
 		8391A5891B027A7C005A7D8E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		83B9CF521B053DB4009B69E8 /* CorvallisRRR-5.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CorvallisRRR-5.mobileprovision"; sourceTree = "<group>"; };
 		83BE26ED1AFA7E0800D92361 /* CorvallisRecycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorvallisRecycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BE26F11AFA7E0800D92361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BE26F21AFA7E0800D92361 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 		83BE26EF1AFA7E0800D92361 /* CorvallisRecycle */ = {
 			isa = PBXGroup;
 			children = (
+				83B9CF521B053DB4009B69E8 /* CorvallisRRR-5.mobileprovision */,
 				83BE26F41AFA7E0800D92361 /* AppDelegate.h */,
 				83BE26F51AFA7E0900D92361 /* AppDelegate.m */,
 				83BE26F71AFA7E0900D92361 /* ViewController.h */,
@@ -427,6 +429,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -435,6 +439,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d1914cf8-1a7e-45fc-9f72-dd82fceccb50";
 				"VALID_ARCHS[sdk=*]" = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -451,6 +456,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d1914cf8-1a7e-45fc-9f72-dd82fceccb50";
 			};
 			name = Release;
 		};
