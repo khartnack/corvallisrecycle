@@ -63,8 +63,9 @@
 
 - (void)fetchFeed
 {
+    NSString *requestString = @"http://web.engr.oregonstate.edu/~marshale/recycleAPI/category";
     
-    NSString *requestString = @"http://web.engr.oregonstate.edu/~beltramk/cs496/nerdranch5";
+   // NSString *requestString = @"http://web.engr.oregonstate.edu/~beltramk/cs496/nerdranch5";
     NSURL *url = [NSURL URLWithString:requestString];
     NSURLRequest *req = [NSURLRequest requestWithURL:url  cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
    

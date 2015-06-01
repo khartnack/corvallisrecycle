@@ -122,15 +122,15 @@
          for ( NSDictionary *theCourse in courses )
          {
              NSLog(@"----");
-             NSLog(@"Title: %@", theCourse[@"title"] );
-             self.NameDataText = theCourse[@"title"];
+             NSLog(@"Title: %@", theCourse[@"name"] );
+             self.NameDataText = theCourse[@"name"];
              self.AddressDataText = theCourse[@"address"];
-             self.CityDataText = theCourse[@"city"];
-             self.StateDataText = theCourse[@"state"];
-             self.ZipDataText = theCourse[@"zip"];
-             self.PhoneDataText = theCourse[@"phone"];
+             //self.CityDataText = theCourse[@"city"];
+             //self.StateDataText = theCourse[@"state"];
+            // self.ZipDataText = theCourse[@"zip"];
+             self.PhoneDataText = theCourse[@"phonenumber"];
              self.WSDataText = theCourse[@"website"];
-             self.NotesDataText = theCourse[@"notes"];
+            //self.NotesDataText = theCourse[@"notes"];
       
              
              NSLog(@"----");
@@ -150,14 +150,16 @@
   
     [super viewWillAppear:animated];
     self.NameData.text = self.NameDataText;
-    self.CityData.text = self.CityDataText;
+    //self.CityData.text = self.CityDataText;
     self.StreetData.text = self.AddressDataText;
-    self.StateData.text = self.StateDataText;
-    self.ZipData.text = self.ZipDataText;
+   // self.StateData.text = self.StateDataText;
+    //self.ZipData.text = self.ZipDataText;
     self.WSData.text = self.WSDataText;
+   
     self.PhoneData.text = self.PhoneDataText;
-    self.NotesData.text = self.NotesDataText;
-    
+ //   self.NotesData.text = self.NotesDataText;
+    if (![self.PhoneData.text isEqualToString: @"N/A"])
+    {
     //code from: http://quantgreeks.com/convert-a-string-to-phone-number-format-in-objective-cswift/
     NSMutableString *stringts = [NSMutableString stringWithString:self.PhoneData.text];
     [stringts insertString:@"(" atIndex:0];
@@ -165,6 +167,7 @@
     [stringts insertString:@"-" atIndex:5];
     [stringts insertString:@"-" atIndex:9];
     self.PhoneData.text = stringts;
+    }
     //self.NotesData.text = self.NotesDataText;
     
 //- (void)viewDidLoad {

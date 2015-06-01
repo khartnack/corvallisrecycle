@@ -141,8 +141,8 @@
     NSDictionary *business = self.businesses[indexPath.row];
     NSURL *URL = [NSURL URLWithString:business[@"url"]];
     
-    self.businessInfoViewController.title = business[@"title"];
-    self.businessInfoViewController.URL = URL;
+    self.dataViewController.title = business[@"title"];
+  //  self.businessInfoViewController.URL = URL;
     self.dataViewController.URL = URL;
    // NSLog(@"--%@",URL);
   //  [self.navigationController pushViewController:self.businessInfoViewController animated:YES];
