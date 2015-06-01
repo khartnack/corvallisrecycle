@@ -69,7 +69,7 @@
                                                  delegate:self
                                             delegateQueue:nil];
         _URL = URL;
-    
+        
         
     }
     return self;
@@ -99,7 +99,7 @@
 - (void)fetchFeed
 {
     
-  
+    
     NSLog(@"--%@",_URL);
     NSLog(@"fetch feed");
     NSURLRequest *req = [NSURLRequest requestWithURL:_URL cachePolicy:NSURLRequestReloadIgnoringCacheData
@@ -127,57 +127,58 @@
              self.AddressDataText = theCourse[@"address"];
              //self.CityDataText = theCourse[@"city"];
              //self.StateDataText = theCourse[@"state"];
-            // self.ZipDataText = theCourse[@"zip"];
+             // self.ZipDataText = theCourse[@"zip"];
              self.PhoneDataText = theCourse[@"phonenumber"];
              self.WSDataText = theCourse[@"website"];
-            //self.NotesDataText = theCourse[@"notes"];
-      
+             //self.NotesDataText = theCourse[@"notes"];
+             
              
              NSLog(@"----");
          }
          
-     dispatch_async(dispatch_get_main_queue(), ^{
-         
-        
+         dispatch_async(dispatch_get_main_queue(), ^{
+             
+             
          });
      }];
     [dataTask resume];
 }
 //541322575363842
 
--(void)viewWillAppear:(BOOL)animated
+-(void)viewDidAppear:(BOOL)animated
 {
-  
-    [super viewWillAppear:animated];
+    
+    [super viewDidAppear:animated];
     self.NameData.text = self.NameDataText;
     //self.CityData.text = self.CityDataText;
     self.StreetData.text = self.AddressDataText;
-   // self.StateData.text = self.StateDataText;
+    // self.StateData.text = self.StateDataText;
     //self.ZipData.text = self.ZipDataText;
     self.WSData.text = self.WSDataText;
-   
+    
     self.PhoneData.text = self.PhoneDataText;
- //   self.NotesData.text = self.NotesDataText;
+    //   self.NotesData.text = self.NotesDataText;
+    
     if (![self.PhoneData.text isEqualToString: @"N/A"])
     {
-    //code from: http://quantgreeks.com/convert-a-string-to-phone-number-format-in-objective-cswift/
-    NSMutableString *stringts = [NSMutableString stringWithString:self.PhoneData.text];
-    [stringts insertString:@"(" atIndex:0];
-    [stringts insertString:@")" atIndex:4];
-    [stringts insertString:@"-" atIndex:5];
-    [stringts insertString:@"-" atIndex:9];
-    self.PhoneData.text = stringts;
+        //code from: http://quantgreeks.com/convert-a-string-to-phone-number-format-in-objective-cswift/
+        NSMutableString *stringts = [NSMutableString stringWithString:self.PhoneData.text];
+        [stringts insertString:@"(" atIndex:0];
+        [stringts insertString:@")" atIndex:4];
+        [stringts insertString:@"-" atIndex:5];
+        [stringts insertString:@"-" atIndex:9];
+        self.PhoneData.text = stringts;
     }
     //self.NotesData.text = self.NotesDataText;
     
-//- (void)viewDidLoad {
-  
-   // self.NameData = _NameData;
-
-  //    [super viewDidLoad];
+    //- (void)viewDidLoad {
+    
+    // self.NameData = _NameData;
+    
+    //    [super viewDidLoad];
     // Do any additional setup after loading the view frm its nib.
     NSLog(@"HERE2");
- //   [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+    //   [[NSOperationQueue mainQueue] addOperationWithBlock:^{
     
     //}];
     
@@ -186,9 +187,9 @@
 
 - (IBAction)viewWebSite:(id)sender
 {
-     NSLog(@"--open url%@",self.WSData.text);
-     NSLog(@"--open url2%@",self.WSDataText);
-   // [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://site.republicservices.com/site/corvallis-or/en/documents/corvallisrecycledepot.pdf"]];
+    NSLog(@"--open url%@",self.WSData.text);
+    NSLog(@"--open url2%@",self.WSDataText);
+    // [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://site.republicservices.com/site/corvallis-or/en/documents/corvallisrecycledepot.pdf"]];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.WSDataText]];
     
 }
