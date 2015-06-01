@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *AddressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *PhoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *WebSiteLabel;
+@property (weak, nonatomic) IBOutlet UITextView *AddressField;
 @property (weak, nonatomic) IBOutlet UILabel *NotesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *StreetData;
 @property (weak, nonatomic) IBOutlet UILabel *CityData;
@@ -151,7 +152,7 @@
     [super viewDidAppear:animated];
     self.NameData.text = self.NameDataText;
     //self.CityData.text = self.CityDataText;
-    self.StreetData.text = self.AddressDataText;
+    self.AddressField.text = self.AddressDataText;
     // self.StateData.text = self.StateDataText;
     //self.ZipData.text = self.ZipDataText;
     self.WSData.text = self.WSDataText;

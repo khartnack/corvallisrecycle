@@ -58,9 +58,9 @@
     NSLog(@"viewdidload");
     
     
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Map" style: UIBarButtonItemStylePlain    target:self action:@selector(map)];
+  //  UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Map" style: UIBarButtonItemStylePlain    target:self action:@selector(map)];
 
-    self.navigationItem.rightBarButtonItem = backButton;
+//    self.navigationItem.rightBarButtonItem = backButton;
     
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
