@@ -14,6 +14,10 @@
 #import "AppDelegate.h"
 #import "ItemViewController.h"
 #import "BusinessInfoViewController.h"
+#import<MapKit/MapKit.h>
+#import<AddressBook/AddressBook.h>
+
+
 
 @interface DataViewController () <NSURLSessionDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *AddressLabel;
@@ -23,12 +27,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *NotesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *StreetData;
 @property (weak, nonatomic) IBOutlet UILabel *CityData;
+@property (weak, nonatomic) IBOutlet UIButton *MapButton;
 @property (weak, nonatomic) IBOutlet UILabel *StateData;
 @property (weak, nonatomic) IBOutlet UILabel *ZipData;
 @property (weak, nonatomic) IBOutlet UILabel *PhoneData;
 @property (weak, nonatomic) IBOutlet UILabel *WSData;
 @property (weak, nonatomic) IBOutlet UITextView *NotesData;
-
+@property CLLocationCoordinate2D coords;
 @property (weak, nonatomic) NSString *NameDataText;
 @property (weak, nonatomic) NSString *AddressDataText;
 @property (weak, nonatomic) NSString *CityDataText;
@@ -37,12 +42,14 @@
 @property (weak, nonatomic) NSString *WSDataText;
 @property (weak, nonatomic) NSString *NotesDataText;
 @property (weak, nonatomic) NSString *PhoneDataText;
-
+@property (weak,nonatomic) NSString *geocoder;
+//@property (strong,nonatomic) CLLocation *coords;
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *NameData;
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, copy) NSArray *businesses;
 @property (nonatomic, copy) NSArray *courses;
+//@property (nonatomic, strong) NSArray *coords;
 @property (nonatomic, strong) NSDictionary *theCourse;
 @end
 
@@ -55,7 +62,7 @@
 @synthesize WSDataText;
 @synthesize NotesDataText;
 @synthesize PhoneDataText;
-
+@synthesize geocoder = _geocoder;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         NSLog(@"HERE");
@@ -150,6 +157,11 @@
 {
     
     [super viewDidAppear:animated];
+   // self.NameData.text = @"";
+   // self.AddressField.text = @"";
+   // self.PhoneData.text = @"";
+  //  self.WSData.text = @"";
+    [super viewWillAppear:animated];
     self.NameData.text = self.NameDataText;
     //self.CityData.text = self.CityDataText;
     self.AddressField.text = self.AddressDataText;
@@ -184,6 +196,47 @@
     //}];
     
     
+}
+
+- (IBAction)addressButton:(id)sender {
+    
+    NSLog(@"addressButton");
+   CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    
+    [geocoder
+     geocodeAddressString:self.AddressField.text
+     completionHandler:^(NSArray *placemarks,
+                         NSError *error) {
+         
+         if (error) {
+             NSLog(@"Geocode failed with error: %@", error);
+             return;
+         }
+         
+         if (placemarks && placemarks.count > 0)
+         {
+             CLPlacemark *placemark = placemarks[0];
+             
+             CLLocation *location = placemark.location;
+             _coords = location.coordinate;
+             
+             [self showMap];
+         }
+     }]; 
+}
+
+-(void)showMap
+{
+    NSDictionary *address = @{
+                              (NSString *)kABPersonAddressStreetKey: _AddressField.text,
+                              };
+    
+    MKPlacemark *place = [[MKPlacemark alloc]
+                          initWithCoordinate:_coords
+                          addressDictionary:address];
+    MKMapItem *mapItem =
+    [[MKMapItem alloc]initWithPlacemark:place];
+    [mapItem openInMapsWithLaunchOptions:nil];
 }
 
 - (IBAction)viewWebSite:(id)sender

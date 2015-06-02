@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="AddressField" destination="Zf4-Ru-Hyr" id="54Z-WS-Lp7"/>
                 <outlet property="AddressLabel" destination="LDf-MC-1E6" id="bCs-V7-1bJ"/>
+                <outlet property="MapButton" destination="EQg-MA-PUQ" id="iaX-1x-aVf"/>
                 <outlet property="NameData" destination="kNV-XJ-1uv" id="79J-by-vi1"/>
                 <outlet property="NameLabel" destination="Gvd-A3-8hj" id="W69-PH-y7G"/>
                 <outlet property="PhoneData" destination="D1G-j6-hak" id="EIA-qv-e3t"/>
@@ -90,6 +91,15 @@
                     </state>
                     <connections>
                         <action selector="viewWebSite:" destination="-1" eventType="touchUpInside" id="v9w-RB-jXQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQg-MA-PUQ">
+                    <rect key="frame" x="18" y="197" width="31" height="30"/>
+                    <state key="normal" title="Map">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="addressButton:" destination="-1" eventType="touchUpInside" id="GoH-mM-VP6"/>
                     </connections>
                 </button>
             </subviews>
