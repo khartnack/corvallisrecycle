@@ -67,7 +67,17 @@
              CLPlacemark *placemark = placemarks[0];
              
              CLLocation *location = placemark.location;
+          
              CLLocationCoordinate2D startCenter = location.coordinate;
+             PlaceAnnotation *annotation = [[PlaceAnnotation alloc] init];
+             annotation.coordinate = startCenter;
+             self.mapView.zoomEnabled = YES;
+             self.mapView.scrollEnabled = YES;
+             [self.mapView addAnnotation:annotation];
+            // [self.mapView setCenterCoordinate:annotation.coordinate
+                         //             animated:YES];
+             
+             
              CLLocationDistance regionWidth  = 1500;
              CLLocationDistance regionHeight = 1500;
              MKCoordinateRegion startRegion = MKCoordinateRegionMakeWithDistance(startCenter,regionWidth, regionHeight);
