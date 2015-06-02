@@ -16,10 +16,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GK6-C1-QfZ">
-                    <rect key="frame" x="35" y="74" width="325" height="439"/>
+                    <rect key="frame" x="-5" y="-16" width="408" height="616"/>
                 </mapView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="159" y="377"/>
         </view>
     </objects>
 </document>

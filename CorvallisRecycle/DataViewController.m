@@ -169,9 +169,9 @@
     
     [super viewDidAppear:animated];
     
-      UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Map" style: UIBarButtonItemStylePlain    target:self action:@selector(map)];
+   //   UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Map" style: UIBarButtonItemStylePlain    target:self action:@selector(map)];
     
-       self.navigationItem.rightBarButtonItem = backButton;
+   //    self.navigationItem.rightBarButtonItem = backButton;
    // self.NameData.text = @"";
    // self.AddressField.text = @"";
    // self.PhoneData.text = @"";
@@ -182,6 +182,12 @@
     self.AddressField.text = self.AddressDataText;
     // self.StateData.text = self.StateDataText;
     //self.ZipData.text = self.ZipDataText;
+    if (![self.AddressField.text isEqualToString: @"N/A"])
+    {
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Map" style: UIBarButtonItemStylePlain    target:self action:@selector(map)];
+    
+    self.navigationItem.rightBarButtonItem = backButton;
+    }
     self.WSData.text = self.WSDataText;
     
     self.PhoneData.text = self.PhoneDataText;

@@ -34,25 +34,26 @@
 
 
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+/*- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Initialization code
         self.navigationItem.title = @"Map";
       
     }
     return self;
-}
+}*/
 
 
 -(void)viewDidAppear:(BOOL)animated
 {
     
     [super viewDidAppear:animated];
+     self.navigationItem.title = @"Map";
    // [super viewDidLoad];
     self.mapView = [[MKMapView alloc] init];
     self.mapView.frame = CGRectMake(0, 0,self.view.bounds.size.width,self.view.bounds.size.height);
     self.mapView.delegate = self;
-    self.mapView.mapType = MKMapTypeHybrid;
+    self.mapView.mapType = MKMapTypeStandard;
     [self.view addSubview:self.mapView];
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     
@@ -83,8 +84,8 @@
                          //             animated:YES];
              
              
-             CLLocationDistance regionWidth  = 1500;
-             CLLocationDistance regionHeight = 1500;
+             CLLocationDistance regionWidth  = 750;
+             CLLocationDistance regionHeight = 750;
              MKCoordinateRegion startRegion = MKCoordinateRegionMakeWithDistance(startCenter,regionWidth, regionHeight);
              [self.mapView setRegion:startRegion animated:YES];
              
