@@ -43,9 +43,11 @@
 }
 
 
-- (void)viewDidLoad
+-(void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    
+    [super viewDidAppear:animated];
+   // [super viewDidLoad];
     self.mapView = [[MKMapView alloc] init];
     self.mapView.frame = CGRectMake(0, 0,self.view.bounds.size.width,self.view.bounds.size.height);
     self.mapView.delegate = self;
