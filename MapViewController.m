@@ -37,7 +37,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         // Initialization code
-        self.navigationItem.title = @"Business";
+        self.navigationItem.title = @"Map";
       
     }
     return self;
@@ -52,6 +52,7 @@
     self.mapView = [[MKMapView alloc] init];
     self.mapView.frame = CGRectMake(0, 0,self.view.bounds.size.width,self.view.bounds.size.height);
     self.mapView.delegate = self;
+    self.mapView.mapType = MKMapTypeHybrid;
     [self.view addSubview:self.mapView];
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     
