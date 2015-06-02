@@ -182,6 +182,7 @@
     self.AddressField.text = self.AddressDataText;
     // self.StateData.text = self.StateDataText;
     //self.ZipData.text = self.ZipDataText;
+    NSLog(@"AddressField %@", self.AddressField.text);
     if (![self.AddressField.text isEqualToString: @"N/A"])
     {
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Map" style: UIBarButtonItemStylePlain    target:self action:@selector(map)];
