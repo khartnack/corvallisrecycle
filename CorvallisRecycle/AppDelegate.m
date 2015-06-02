@@ -19,7 +19,7 @@
 #import "BusinessViewController.h"
 #import "BusinessInfoViewController.h"
 #import "DataViewController.h"
-
+#import "MapViewController.h"
 
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
@@ -53,6 +53,9 @@
     
     DataViewController *dvc = [[DataViewController alloc] init];
     bvc.dataViewController = dvc;
+    
+    MapViewController *mvc = [[MapViewController alloc] init];
+    dvc.mapViewController = mvc;
     
     UINavigationController *masterNav = [[UINavigationController alloc] initWithRootViewController:cvc];
     

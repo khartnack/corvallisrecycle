@@ -14,6 +14,7 @@
 #import "AppDelegate.h"
 #import "ItemViewController.h"
 #import "BusinessInfoViewController.h"
+#import "MapViewController.h"
 #import<MapKit/MapKit.h>
 #import<AddressBook/AddressBook.h>
 
@@ -153,10 +154,24 @@
 }
 //541322575363842
 
+-(void)map{
+    
+    NSLog(@"navigation call for map");
+    self.mapViewController.AddressDataText = AddressDataText;
+    
+    [self.navigationController pushViewController:self.mapViewController animated:YES];
+    
+}
+    
+
 -(void)viewDidAppear:(BOOL)animated
 {
     
     [super viewDidAppear:animated];
+    
+      UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Map" style: UIBarButtonItemStylePlain    target:self action:@selector(map)];
+    
+       self.navigationItem.rightBarButtonItem = backButton;
    // self.NameData.text = @"";
    // self.AddressField.text = @"";
    // self.PhoneData.text = @"";
@@ -222,7 +237,7 @@
              
              [self showMap];
          }
-     }]; 
+     }];
 }
 
 -(void)showMap
