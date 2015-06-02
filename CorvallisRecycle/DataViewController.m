@@ -158,7 +158,7 @@
     
     NSLog(@"navigation call for map");
     self.mapViewController.AddressDataText = AddressDataText;
-    
+    self.mapViewController.NameDataText = NameDataText;
     [self.navigationController pushViewController:self.mapViewController animated:YES];
     
 }

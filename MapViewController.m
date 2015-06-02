@@ -19,11 +19,12 @@
 
 @interface MapViewController ()
 @property CLLocationCoordinate2D coords;
-@property (weak, nonatomic) NSString *NameDataText;
+//@property (weak, nonatomic) NSString *NameDataText;
 //@property (weak, nonatomic) NSString *AddressDataText;
 @property (weak,nonatomic) NSString *geocoder;
 //@property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) PlaceAnnotation *annotation;
+@property (weak, nonatomic) NSString *title;
 @end
 
 @implementation MapViewController
@@ -73,6 +74,7 @@
              CLLocationCoordinate2D startCenter = location.coordinate;
              PlaceAnnotation *annotation = [[PlaceAnnotation alloc] init];
              annotation.coordinate = startCenter;
+             annotation.title = NameDataText;
              self.mapView.zoomEnabled = YES;
              self.mapView.scrollEnabled = YES;
              [self.mapView addAnnotation:annotation];

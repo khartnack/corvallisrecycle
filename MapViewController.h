@@ -15,6 +15,7 @@
 @interface MapViewController : UIViewController  <MKMapViewDelegate>
 @property (strong, nonatomic) MKMapView *mapView;
 @property (strong, nonatomic) NSString *AddressDataText;
+@property (strong, nonatomic) NSString *NameDataText;
 @property (strong, nonatomic) MapViewController *mapViewController;
 @property (strong,nonatomic) DataViewController *dataViewController;
 @property (nonatomic, strong) NSArray *mapItemList;
