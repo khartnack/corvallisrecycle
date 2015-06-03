@@ -60,7 +60,7 @@
 		8391A5871B027395005A7D8E /* recycle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recycle.jpg; sourceTree = "<group>"; };
 		8391A5891B027A7C005A7D8E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		83B9CF521B053DB4009B69E8 /* CorvallisRRR-5.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CorvallisRRR-5.mobileprovision"; sourceTree = "<group>"; };
-		83BE26ED1AFA7E0800D92361 /* CorvallisRRR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorvallisRRR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83BE26ED1AFA7E0800D92361 /* CorvallisRRD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorvallisRRD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BE26F11AFA7E0800D92361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BE26F21AFA7E0800D92361 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83BE26F41AFA7E0800D92361 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		83BE26FB1AFA7E0900D92361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83BE26FD1AFA7E0900D92361 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83BE27001AFA7E0900D92361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		83BE27061AFA7E0900D92361 /* CorvallisRRRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorvallisRRRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83BE27061AFA7E0900D92361 /* CorvallisRRDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorvallisRRDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BE270B1AFA7E0900D92361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BE270C1AFA7E0900D92361 /* CorvallisRecycleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CorvallisRecycleTests.m; sourceTree = "<group>"; };
 		83BE27161AFA7F3400D92361 /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
@@ -130,8 +130,8 @@
 		83BE26EE1AFA7E0800D92361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83BE26ED1AFA7E0800D92361 /* CorvallisRRR.app */,
-				83BE27061AFA7E0900D92361 /* CorvallisRRRTests.xctest */,
+				83BE26ED1AFA7E0800D92361 /* CorvallisRRD.app */,
+				83BE27061AFA7E0900D92361 /* CorvallisRRDTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,9 +216,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		83BE26EC1AFA7E0800D92361 /* CorvallisRRR */ = {
+		83BE26EC1AFA7E0800D92361 /* CorvallisRRD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83BE27101AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRRR" */;
+			buildConfigurationList = 83BE27101AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRRD" */;
 			buildPhases = (
 				83BE26E91AFA7E0800D92361 /* Sources */,
 				83BE26EA1AFA7E0800D92361 /* Frameworks */,
@@ -228,14 +228,14 @@
 			);
 			dependencies = (
 			);
-			name = CorvallisRRR;
+			name = CorvallisRRD;
 			productName = CorvallisRecycle;
-			productReference = 83BE26ED1AFA7E0800D92361 /* CorvallisRRR.app */;
+			productReference = 83BE26ED1AFA7E0800D92361 /* CorvallisRRD.app */;
 			productType = "com.apple.product-type.application";
 		};
-		83BE27051AFA7E0900D92361 /* CorvallisRRRTests */ = {
+		83BE27051AFA7E0900D92361 /* CorvallisRRDTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83BE27131AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRRRTests" */;
+			buildConfigurationList = 83BE27131AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRRDTests" */;
 			buildPhases = (
 				83BE27021AFA7E0900D92361 /* Sources */,
 				83BE27031AFA7E0900D92361 /* Frameworks */,
@@ -246,9 +246,9 @@
 			dependencies = (
 				83BE27081AFA7E0900D92361 /* PBXTargetDependency */,
 			);
-			name = CorvallisRRRTests;
+			name = CorvallisRRDTests;
 			productName = CorvallisRecycleTests;
-			productReference = 83BE27061AFA7E0900D92361 /* CorvallisRRRTests.xctest */;
+			productReference = 83BE27061AFA7E0900D92361 /* CorvallisRRDTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -269,7 +269,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83BE26E81AFA7E0700D92361 /* Build configuration list for PBXProject "CorvallisRRR" */;
+			buildConfigurationList = 83BE26E81AFA7E0700D92361 /* Build configuration list for PBXProject "CorvallisRRD" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -282,8 +282,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83BE26EC1AFA7E0800D92361 /* CorvallisRRR */,
-				83BE27051AFA7E0900D92361 /* CorvallisRRRTests */,
+				83BE26EC1AFA7E0800D92361 /* CorvallisRRD */,
+				83BE27051AFA7E0900D92361 /* CorvallisRRDTests */,
 			);
 		};
 /* End PBXProject section */
@@ -348,7 +348,7 @@
 /* Begin PBXTargetDependency section */
 		83BE27081AFA7E0900D92361 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 83BE26EC1AFA7E0800D92361 /* CorvallisRRR */;
+			target = 83BE26EC1AFA7E0800D92361 /* CorvallisRRD */;
 			targetProxy = 83BE27071AFA7E0900D92361 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -466,7 +466,7 @@
 				INFOPLIST_FILE = CorvallisRecycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = CorvallisRRR;
+				PRODUCT_NAME = CorvallisRRD;
 				PROVISIONING_PROFILE = "d1914cf8-1a7e-45fc-9f72-dd82fceccb50";
 				"VALID_ARCHS[sdk=*]" = "arm64 armv7 armv7s";
 			};
@@ -483,7 +483,7 @@
 				INFOPLIST_FILE = CorvallisRecycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = CorvallisRRR;
+				PRODUCT_NAME = CorvallisRRD;
 				PROVISIONING_PROFILE = "d1914cf8-1a7e-45fc-9f72-dd82fceccb50";
 			};
 			name = Release;
@@ -502,7 +502,7 @@
 				);
 				INFOPLIST_FILE = CorvallisRecycleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = CorvallisRRRTests;
+				PRODUCT_NAME = CorvallisRRDTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CorvallisRecycle.app/CorvallisRecycle";
 			};
 			name = Debug;
@@ -517,7 +517,7 @@
 				);
 				INFOPLIST_FILE = CorvallisRecycleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = CorvallisRRRTests;
+				PRODUCT_NAME = CorvallisRRDTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CorvallisRecycle.app/CorvallisRecycle";
 			};
 			name = Release;
@@ -525,7 +525,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83BE26E81AFA7E0700D92361 /* Build configuration list for PBXProject "CorvallisRRR" */ = {
+		83BE26E81AFA7E0700D92361 /* Build configuration list for PBXProject "CorvallisRRD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83BE270E1AFA7E0900D92361 /* Debug */,
@@ -534,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83BE27101AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRRR" */ = {
+		83BE27101AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRRD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83BE27111AFA7E0900D92361 /* Debug */,
@@ -543,7 +543,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83BE27131AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRRRTests" */ = {
+		83BE27131AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRRDTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83BE27141AFA7E0900D92361 /* Debug */,
