@@ -30,10 +30,10 @@
 		83BE27311AFA821700D92361 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BE272F1AFA821700D92361 /* InfoViewController.m */; };
 		83D521551B1D5BF300738B1D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D521541B1D5BF300738B1D /* AddressBook.framework */; };
 		83D521571B1D5ECC00738B1D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D521561B1D5ECC00738B1D /* CoreLocation.framework */; };
-		83D521741B1D64F000738B1D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D521721B1D64F000738B1D /* MapViewController.m */; };
-		83D521751B1D64F000738B1D /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D521731B1D64F000738B1D /* MapViewController.xib */; };
 		83D521781B1D736F00738B1D /* PlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D521771B1D736F00738B1D /* PlaceAnnotation.m */; };
 		83D5217A1B1D742B00738B1D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D521791B1D742B00738B1D /* MapKit.framework */; };
+		83FD07531B1EA7DF00D0DED6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FD07501B1EA7DF00D0DED6 /* MapViewController.m */; };
+		83FD07541B1EA7DF00D0DED6 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FD07511B1EA7DF00D0DED6 /* MapViewController.xib */; };
 		83FF29D01AFA920B002FB537 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BE272F1AFA821700D92361 /* InfoViewController.m */; };
 		83FF29D11AFA920B002FB537 /* InfoViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 832E7E0B1AFA8656000D73CD /* InfoViewController.xib */; };
 /* End PBXBuildFile section */
@@ -60,7 +60,7 @@
 		8391A5871B027395005A7D8E /* recycle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recycle.jpg; sourceTree = "<group>"; };
 		8391A5891B027A7C005A7D8E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		83B9CF521B053DB4009B69E8 /* CorvallisRRR-5.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CorvallisRRR-5.mobileprovision"; sourceTree = "<group>"; };
-		83BE26ED1AFA7E0800D92361 /* CorvallisRecycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorvallisRecycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83BE26ED1AFA7E0800D92361 /* CorvallisRRR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorvallisRRR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BE26F11AFA7E0800D92361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BE26F21AFA7E0800D92361 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83BE26F41AFA7E0800D92361 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		83BE26FB1AFA7E0900D92361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		83BE26FD1AFA7E0900D92361 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		83BE27001AFA7E0900D92361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		83BE27061AFA7E0900D92361 /* CorvallisRecycleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorvallisRecycleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83BE27061AFA7E0900D92361 /* CorvallisRRRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorvallisRRRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BE270B1AFA7E0900D92361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BE270C1AFA7E0900D92361 /* CorvallisRecycleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CorvallisRecycleTests.m; sourceTree = "<group>"; };
 		83BE27161AFA7F3400D92361 /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
@@ -85,12 +85,12 @@
 		83BE272F1AFA821700D92361 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoViewController.m; path = CorvallisRecycleTests/InfoViewController.m; sourceTree = SOURCE_ROOT; };
 		83D521541B1D5BF300738B1D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		83D521561B1D5ECC00738B1D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		83D521711B1D64F000738B1D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
-		83D521721B1D64F000738B1D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
-		83D521731B1D64F000738B1D /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = ../MapViewController.xib; sourceTree = "<group>"; };
 		83D521761B1D736900738B1D /* PlaceAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceAnnotation.h; sourceTree = "<group>"; };
 		83D521771B1D736F00738B1D /* PlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceAnnotation.m; sourceTree = "<group>"; };
 		83D521791B1D742B00738B1D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		83FD07501B1EA7DF00D0DED6 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		83FD07511B1EA7DF00D0DED6 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		83FD07521B1EA7DF00D0DED6 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +130,8 @@
 		83BE26EE1AFA7E0800D92361 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83BE26ED1AFA7E0800D92361 /* CorvallisRecycle.app */,
-				83BE27061AFA7E0900D92361 /* CorvallisRecycleTests.xctest */,
+				83BE26ED1AFA7E0800D92361 /* CorvallisRRR.app */,
+				83BE27061AFA7E0900D92361 /* CorvallisRRRTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,9 +139,9 @@
 		83BE26EF1AFA7E0800D92361 /* CorvallisRecycle */ = {
 			isa = PBXGroup;
 			children = (
-				83D521711B1D64F000738B1D /* MapViewController.h */,
-				83D521721B1D64F000738B1D /* MapViewController.m */,
-				83D521731B1D64F000738B1D /* MapViewController.xib */,
+				83FD07501B1EA7DF00D0DED6 /* MapViewController.m */,
+				83FD07511B1EA7DF00D0DED6 /* MapViewController.xib */,
+				83FD07521B1EA7DF00D0DED6 /* MapViewController.h */,
 				83B9CF521B053DB4009B69E8 /* CorvallisRRR-5.mobileprovision */,
 				83BE26F41AFA7E0800D92361 /* AppDelegate.h */,
 				83BE26F51AFA7E0900D92361 /* AppDelegate.m */,
@@ -216,9 +216,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		83BE26EC1AFA7E0800D92361 /* CorvallisRecycle */ = {
+		83BE26EC1AFA7E0800D92361 /* CorvallisRRR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83BE27101AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRecycle" */;
+			buildConfigurationList = 83BE27101AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRRR" */;
 			buildPhases = (
 				83BE26E91AFA7E0800D92361 /* Sources */,
 				83BE26EA1AFA7E0800D92361 /* Frameworks */,
@@ -228,14 +228,14 @@
 			);
 			dependencies = (
 			);
-			name = CorvallisRecycle;
+			name = CorvallisRRR;
 			productName = CorvallisRecycle;
-			productReference = 83BE26ED1AFA7E0800D92361 /* CorvallisRecycle.app */;
+			productReference = 83BE26ED1AFA7E0800D92361 /* CorvallisRRR.app */;
 			productType = "com.apple.product-type.application";
 		};
-		83BE27051AFA7E0900D92361 /* CorvallisRecycleTests */ = {
+		83BE27051AFA7E0900D92361 /* CorvallisRRRTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83BE27131AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRecycleTests" */;
+			buildConfigurationList = 83BE27131AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRRRTests" */;
 			buildPhases = (
 				83BE27021AFA7E0900D92361 /* Sources */,
 				83BE27031AFA7E0900D92361 /* Frameworks */,
@@ -246,9 +246,9 @@
 			dependencies = (
 				83BE27081AFA7E0900D92361 /* PBXTargetDependency */,
 			);
-			name = CorvallisRecycleTests;
+			name = CorvallisRRRTests;
 			productName = CorvallisRecycleTests;
-			productReference = 83BE27061AFA7E0900D92361 /* CorvallisRecycleTests.xctest */;
+			productReference = 83BE27061AFA7E0900D92361 /* CorvallisRRRTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -269,7 +269,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83BE26E81AFA7E0700D92361 /* Build configuration list for PBXProject "CorvallisRecycle" */;
+			buildConfigurationList = 83BE26E81AFA7E0700D92361 /* Build configuration list for PBXProject "CorvallisRRR" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -282,8 +282,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				83BE26EC1AFA7E0800D92361 /* CorvallisRecycle */,
-				83BE27051AFA7E0900D92361 /* CorvallisRecycleTests */,
+				83BE26EC1AFA7E0800D92361 /* CorvallisRRR */,
+				83BE27051AFA7E0900D92361 /* CorvallisRRRTests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,8 +294,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8391A58A1B027A7C005A7D8E /* icon.png in Resources */,
-				83D521751B1D64F000738B1D /* MapViewController.xib in Resources */,
 				8344E8761B02C91B00C01F8C /* DataViewController.xib in Resources */,
+				83FD07541B1EA7DF00D0DED6 /* MapViewController.xib in Resources */,
 				832E7E0C1AFA8656000D73CD /* InfoViewController.xib in Resources */,
 				8344E8781B03E23200C01F8C /* 16-16-bae1463b4228b5053cf1c9a7986ed827.png in Resources */,
 				8391A5881B027395005A7D8E /* recycle.jpg in Resources */,
@@ -326,9 +326,9 @@
 				8344E8751B02C91B00C01F8C /* DataViewController.m in Sources */,
 				83BE26F91AFA7E0900D92361 /* ViewController.m in Sources */,
 				83BE26F61AFA7E0900D92361 /* AppDelegate.m in Sources */,
+				83FD07531B1EA7DF00D0DED6 /* MapViewController.m in Sources */,
 				83BE27181AFA7F3400D92361 /* ItemViewController.m in Sources */,
 				83D521781B1D736F00738B1D /* PlaceAnnotation.m in Sources */,
-				83D521741B1D64F000738B1D /* MapViewController.m in Sources */,
 				83BE27211AFA7FD200D92361 /* BusinessInfoViewController.m in Sources */,
 				83BE26F31AFA7E0800D92361 /* main.m in Sources */,
 			);
@@ -348,7 +348,7 @@
 /* Begin PBXTargetDependency section */
 		83BE27081AFA7E0900D92361 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 83BE26EC1AFA7E0800D92361 /* CorvallisRecycle */;
+			target = 83BE26EC1AFA7E0800D92361 /* CorvallisRRR */;
 			targetProxy = 83BE27071AFA7E0900D92361 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -466,7 +466,7 @@
 				INFOPLIST_FILE = CorvallisRecycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CorvallisRRR;
 				PROVISIONING_PROFILE = "d1914cf8-1a7e-45fc-9f72-dd82fceccb50";
 				"VALID_ARCHS[sdk=*]" = "arm64 armv7 armv7s";
 			};
@@ -483,7 +483,7 @@
 				INFOPLIST_FILE = CorvallisRecycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CorvallisRRR;
 				PROVISIONING_PROFILE = "d1914cf8-1a7e-45fc-9f72-dd82fceccb50";
 			};
 			name = Release;
@@ -502,7 +502,7 @@
 				);
 				INFOPLIST_FILE = CorvallisRecycleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CorvallisRRRTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CorvallisRecycle.app/CorvallisRecycle";
 			};
 			name = Debug;
@@ -517,7 +517,7 @@
 				);
 				INFOPLIST_FILE = CorvallisRecycleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CorvallisRRRTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CorvallisRecycle.app/CorvallisRecycle";
 			};
 			name = Release;
@@ -525,7 +525,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83BE26E81AFA7E0700D92361 /* Build configuration list for PBXProject "CorvallisRecycle" */ = {
+		83BE26E81AFA7E0700D92361 /* Build configuration list for PBXProject "CorvallisRRR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83BE270E1AFA7E0900D92361 /* Debug */,
@@ -534,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83BE27101AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRecycle" */ = {
+		83BE27101AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRRR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83BE27111AFA7E0900D92361 /* Debug */,
@@ -543,7 +543,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83BE27131AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRecycleTests" */ = {
+		83BE27131AFA7E0900D92361 /* Build configuration list for PBXNativeTarget "CorvallisRRRTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83BE27141AFA7E0900D92361 /* Debug */,

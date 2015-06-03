@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CorvallisRecycle.xcodeproj">
+      location = "self:CorvallisRRR.xcodeproj">
    </FileRef>
 </Workspace>
