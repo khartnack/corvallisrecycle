@@ -79,7 +79,7 @@
                                                  delegate:self
                                             delegateQueue:nil];
         _URL = URL;
-        
+
         
     }
     return self;
@@ -164,7 +164,15 @@
     
 }
     
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.NameData.text = @"";
+    self.AddressField.text = @"";
+    self.PhoneData.text = @"";
+    self.WSData.text = @"";
+    // Do any additional setup after loading the view from its nib.
+}
 -(void)viewDidAppear:(BOOL)animated
 {
     
@@ -173,11 +181,12 @@
    //   UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Map" style: UIBarButtonItemStylePlain    target:self action:@selector(map)];
     
    //    self.navigationItem.rightBarButtonItem = backButton;
-   // self.NameData.text = @"";
-   // self.AddressField.text = @"";
-   // self.PhoneData.text = @"";
-  //  self.WSData.text = @"";
-    [super viewWillAppear:animated];
+  //  self.NameData.text = @"-";
+  //  self.AddressField.text = @"-";
+  //  self.PhoneData.text = @"-";
+  //  self.WSData.text = @"-";
+    
+    //[super viewWillAppear:animated];
     self.NameData.text = self.NameDataText;
     //self.CityData.text = self.CityDataText;
     self.AddressField.text = self.AddressDataText;
@@ -196,7 +205,8 @@
     //   self.NotesData.text = self.NotesDataText;
     
     if (![self.PhoneData.text isEqualToString: @"N/A"])
-    {
+        {
+ 
         //code from: http://quantgreeks.com/convert-a-string-to-phone-number-format-in-objective-cswift/
         NSMutableString *stringts = [NSMutableString stringWithString:self.PhoneData.text];
         [stringts insertString:@"(" atIndex:0];
@@ -204,7 +214,8 @@
         [stringts insertString:@"-" atIndex:5];
         [stringts insertString:@"-" atIndex:9];
         self.PhoneData.text = stringts;
-    }
+
+        }
     //self.NotesData.text = self.NotesDataText;
     
     //- (void)viewDidLoad {
