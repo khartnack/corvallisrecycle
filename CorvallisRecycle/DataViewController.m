@@ -212,7 +212,7 @@
         NSMutableString *stringts = [NSMutableString stringWithString:self.PhoneData.text];
         [stringts insertString:@"(" atIndex:0];
         [stringts insertString:@")" atIndex:4];
-        [stringts insertString:@"-" atIndex:5];
+        [stringts insertString:@" " atIndex:5];
         [stringts insertString:@"-" atIndex:9];
         self.PhoneData.text = stringts;
 
