@@ -23,7 +23,6 @@
 @class ViewController;
 @class MapViewController;
 @interface DataViewController : UIViewController
-//-(void)fetchFeed:(NSURL *)URL;
 @property (nonatomic, strong) NSURL                 *URL;
 @property (nonatomic,retain) DataViewController  *dataViewController;
 @property (nonatomic,retain) BusinessViewController *businessViewController;

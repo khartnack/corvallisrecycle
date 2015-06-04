@@ -48,9 +48,6 @@
     BusinessViewController *bvc = [[BusinessViewController alloc] init];
     rvc.businessViewController = bvc;
     
-  // //  BusinessInfoViewController *bivc = [[BusinessInfoViewController alloc] initWithStyle:UITableViewStyleGrouped];
-   // bvc.businessInfoViewController = bivc;
-    
     DataViewController *dvc = [[DataViewController alloc] init];
     bvc.dataViewController = dvc;
     

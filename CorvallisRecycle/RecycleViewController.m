@@ -132,16 +132,6 @@
     [self.navigationController pushViewController:self.businessViewController animated:YES];
 }
 
-/*- (void)  URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
- didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
-   completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential *))completionHandler
-{
-    NSURLCredential *cred =
-    [NSURLCredential credentialWithUser:@"BigNerdRanch"
-                               password:@"AchieveNerdvana"
-                            persistence:NSURLCredentialPersistenceForSession];
-    completionHandler(NSURLSessionAuthChallengeUseCredential, cred);
-}*/
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
 {
