@@ -84,8 +84,8 @@
                          //             animated:YES];
              
              
-             CLLocationDistance regionWidth  = 750;
-             CLLocationDistance regionHeight = 750;
+             CLLocationDistance regionWidth  = 1500;
+             CLLocationDistance regionHeight = 1500;
              MKCoordinateRegion startRegion = MKCoordinateRegionMakeWithDistance(startCenter,regionWidth, regionHeight);
              [self.mapView setRegion:startRegion animated:YES];
              
