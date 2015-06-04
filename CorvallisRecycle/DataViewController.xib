@@ -15,6 +15,7 @@
                 <outlet property="PhoneLabel" destination="nrn-kL-Jqo" id="lm0-ft-G4m"/>
                 <outlet property="WSData" destination="uVV-zZ-KnW" id="Iyt-aN-3ud"/>
                 <outlet property="WebSiteLabel" destination="Hub-zq-3TR" id="uOb-gD-o31"/>
+                <outlet property="lineLabel" destination="yST-ef-ujN" id="Bpu-N5-OSs"/>
                 <outlet property="noteLabel" destination="DwI-ma-wBF" id="NsH-vc-gCy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -110,6 +111,12 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="16-16-bae1463b4228b5053cf1c9a7986ed827.png" translatesAutoresizingMaskIntoConstraints="NO" id="FHa-KP-aLf">
                     <rect key="frame" x="199" y="256" width="23" height="21"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="________________________________________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yST-ef-ujN">
+                    <rect key="frame" x="0.0" y="78" width="413" height="19"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>

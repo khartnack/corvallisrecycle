@@ -24,7 +24,7 @@
 @property (weak,nonatomic) NSString *geocoder;
 //@property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) PlaceAnnotation *annotation;
-@property (weak, nonatomic) NSString *title;
+//@property (nonatomic, copy) NSString *title;
 @end
 
 @implementation MapViewController

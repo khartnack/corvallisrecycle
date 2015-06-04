@@ -21,6 +21,7 @@
 
 
 @interface DataViewController () <NSURLSessionDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *lineLabel;
 @property (weak, nonatomic) IBOutlet UILabel *noteLabel;
 @property (weak, nonatomic) IBOutlet UILabel *AddressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *PhoneLabel;
