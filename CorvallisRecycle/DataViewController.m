@@ -27,43 +27,27 @@
 @property (weak, nonatomic) IBOutlet UILabel *PhoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *WebSiteLabel;
 @property (weak, nonatomic) IBOutlet UITextView *AddressField;
-@property (weak, nonatomic) IBOutlet UILabel *NotesLabel;
-@property (weak, nonatomic) IBOutlet UILabel *StreetData;
-@property (weak, nonatomic) IBOutlet UILabel *CityData;
 @property (weak, nonatomic) IBOutlet UIButton *MapButton;
-@property (weak, nonatomic) IBOutlet UILabel *StateData;
-@property (weak, nonatomic) IBOutlet UILabel *ZipData;
 @property (weak, nonatomic) IBOutlet UILabel *PhoneData;
 @property (weak, nonatomic) IBOutlet UILabel *WSData;
-@property (weak, nonatomic) IBOutlet UITextView *NotesData;
 @property CLLocationCoordinate2D coords;
 @property (weak, nonatomic) NSString *NameDataText;
 @property (weak, nonatomic) NSString *AddressDataText;
-@property (weak, nonatomic) NSString *CityDataText;
-@property (weak, nonatomic) NSString *StateDataText;
-@property (weak, nonatomic) NSString *ZipDataText;
 @property (weak, nonatomic) NSString *WSDataText;
-@property (weak, nonatomic) NSString *NotesDataText;
 @property (weak, nonatomic) NSString *PhoneDataText;
 @property (weak,nonatomic) NSString *geocoder;
-//@property (strong,nonatomic) CLLocation *coords;
 @property (weak, nonatomic) IBOutlet UILabel *NameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *NameData;
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, copy) NSArray *businesses;
 @property (nonatomic, copy) NSArray *courses;
-//@property (nonatomic, strong) NSArray *coords;
 @property (nonatomic, strong) NSDictionary *theCourse;
 @end
 
 @implementation DataViewController
 @synthesize NameDataText;
 @synthesize AddressDataText;
-@synthesize CityDataText;
-@synthesize StateDataText;
-@synthesize ZipDataText;
 @synthesize WSDataText;
-@synthesize NotesDataText;
 @synthesize PhoneDataText;
 @synthesize geocoder = _geocoder;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -80,20 +64,10 @@
                                                  delegate:self
                                             delegateQueue:nil];
         _URL = URL;
-
-        
     }
     return self;
-    
-    
 }
 
-
-/*
- - (void)didReceiveMemoryWarning {
- [super didReceiveMemoryWarning];
- // Dispose of any resources that can be recreated.
- }*/
 
 - (void)setURL:(NSURL *)URL
 {
@@ -103,16 +77,11 @@
     
     if (_URL) {
         [self fetchFeed];
-        
     }
 }
 
 - (void)fetchFeed
 {
-    
-    
-    NSLog(@"--%@",_URL);
-    NSLog(@"fetch feed");
     NSURLRequest *req = [NSURLRequest requestWithURL:_URL cachePolicy:NSURLRequestReloadIgnoringCacheData
                                      timeoutInterval:60.0];
     NSLog(@"jsonObject -->%@", _URL);
@@ -126,35 +95,21 @@
          NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data
                                                                     options:0
                                                                       error:&err];
-         
          self.businesses = jsonObject[@"courses"];
-         //self.NameData= [jsonObject objectForKey:@"title"];
          NSArray *courses = jsonObject[@"courses"];
          for ( NSDictionary *theCourse in courses )
          {
-             NSLog(@"----");
-             NSLog(@"Title: %@", theCourse[@"name"] );
              self.NameDataText = theCourse[@"name"];
              self.AddressDataText = theCourse[@"address"];
-             //self.CityDataText = theCourse[@"city"];
-             //self.StateDataText = theCourse[@"state"];
-             // self.ZipDataText = theCourse[@"zip"];
              self.PhoneDataText = theCourse[@"phonenumber"];
              self.WSDataText = theCourse[@"website"];
-             //self.NotesDataText = theCourse[@"notes"];
-             
-             
-             NSLog(@"----");
          }
          
          dispatch_async(dispatch_get_main_queue(), ^{
-             
-             
          });
      }];
     [dataTask resume];
 }
-//541322575363842
 
 -(void)map{
     
@@ -162,7 +117,6 @@
     self.mapViewController.AddressDataText = AddressDataText;
     self.mapViewController.NameDataText = NameDataText;
     [self.navigationController pushViewController:self.mapViewController animated:YES];
-    
 }
     
 -(void)viewWillAppear:(BOOL)animated
@@ -176,23 +130,9 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
-    
     [super viewDidAppear:animated];
-    
-   //   UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:@"Map" style: UIBarButtonItemStylePlain    target:self action:@selector(map)];
-    
-   //    self.navigationItem.rightBarButtonItem = backButton;
-  //  self.NameData.text = @"-";
-  //  self.AddressField.text = @"-";
-  //  self.PhoneData.text = @"-";
-  //  self.WSData.text = @"-";
-    
-    //[super viewWillAppear:animated];
     self.NameData.text = self.NameDataText;
-    //self.CityData.text = self.CityDataText;
     self.AddressField.text = self.AddressDataText;
-    // self.StateData.text = self.StateDataText;
-    //self.ZipData.text = self.ZipDataText;
     NSLog(@"AddressField %@", self.AddressField.text);
     if (![self.AddressField.text isEqualToString: @"N/A"])
     {
@@ -201,10 +141,7 @@
     self.navigationItem.rightBarButtonItem = backButton;
     }
     self.WSData.text = self.WSDataText;
-    
     self.PhoneData.text = self.PhoneDataText;
-    //   self.NotesData.text = self.NotesDataText;
-    
     if (![self.PhoneData.text isEqualToString: @"N/A"])
         {
  
@@ -215,22 +152,7 @@
         [stringts insertString:@" " atIndex:5];
         [stringts insertString:@"-" atIndex:9];
         self.PhoneData.text = stringts;
-
         }
-    //self.NotesData.text = self.NotesDataText;
-    
-    //- (void)viewDidLoad {
-    
-    // self.NameData = _NameData;
-    
-    //    [super viewDidLoad];
-    // Do any additional setup after loading the view frm its nib.
-    NSLog(@"HERE2");
-    //   [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-    
-    //}];
-    
-    
 }
 
 - (IBAction)addressButton:(id)sender {
@@ -276,9 +198,7 @@
 
 - (IBAction)viewWebSite:(id)sender
 {
-    NSLog(@"--open url%@",self.WSData.text);
-    NSLog(@"--open url2%@",self.WSDataText);
-    // [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://site.republicservices.com/site/corvallis-or/en/documents/corvallisrecycledepot.pdf"]];
+
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.WSDataText]];
     
 }
