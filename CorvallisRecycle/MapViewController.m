@@ -44,6 +44,7 @@
 }*/
 
 
+
 -(void)viewWillAppear:(BOOL)animated
 {
     
@@ -105,6 +106,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 /*
 - (IBAction)addressButton:(id)sender {
     
@@ -133,6 +137,8 @@
      }];
 }
 
+ 
+ ￼      ￼
 -(void)showMap
 {
     NSDictionary *address = @{
