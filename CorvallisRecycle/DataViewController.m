@@ -111,14 +111,14 @@
     [dataTask resume];
 }
 
+//action if user clicks on map
 -(void)map{
-    
-    NSLog(@"navigation call for map");
     self.mapViewController.AddressDataText = AddressDataText;
     self.mapViewController.NameDataText = NameDataText;
     [self.navigationController pushViewController:self.mapViewController animated:YES];
 }
-    
+
+//clears data from previous view.  Has fields set to empty.
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
