@@ -44,10 +44,10 @@
 }*/
 
 
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
     
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
      self.navigationItem.title = @"Map";
    // [super viewDidLoad];
     self.mapView = [[MKMapView alloc] init];
