@@ -17,7 +17,6 @@
 @class RecycleViewController;
 @class ItemViewController;
 @class BusinessViewController;
-@class BusinessInfoViewController;
 @class DataViewController;
 @interface BusinessViewController : UITableViewController
 
