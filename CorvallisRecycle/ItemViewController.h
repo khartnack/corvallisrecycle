@@ -15,7 +15,6 @@
 @class RecycleViewController;
 @class ItemViewController;
 @class BusinessViewController;
-@class BusinessInfoViewController;
 @class DataViewController;
 @interface ItemViewController : UITableViewController
 @property (nonatomic, weak) IBOutlet UILabel *recycleTitle;
@@ -23,7 +22,6 @@
 @property (nonatomic, strong) ItemViewController *itemViewController;
 @property(nonatomic,retain) RecycleViewController  *recycleViewController;
 @property(nonatomic, retain) BusinessViewController *businessViewController;
-@property(nonatomic, retain) BusinessInfoViewController *businessInfoViewController;
 @property(nonatomic, retain) DataViewController *dataInfoViewController;
 @property (nonatomic, strong) NSURL                 *URL;
 

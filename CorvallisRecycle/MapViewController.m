@@ -11,7 +11,6 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "ItemViewController.h"
-#import "BusinessInfoViewController.h"
 #import<AddressBook/AddressBook.h>
 #import "MapViewController.h"
 #import "PlaceAnnotation.h"

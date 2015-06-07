@@ -22,6 +22,5 @@
 
 @property (nonatomic, strong) NSURL                 *URL;
 @property (nonatomic,retain) BusinessViewController  *businessViewController;
-@property (nonatomic, retain) BusinessInfoViewController *businessInfoViewController;
 @property (nonatomic, retain) DataViewController *dataViewController;
 @end
