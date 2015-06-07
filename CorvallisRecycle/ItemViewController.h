@@ -11,7 +11,6 @@
 #import "AppDelegate.h"
 
 
-
 @class RecycleViewController;
 @class ItemViewController;
 @class BusinessViewController;

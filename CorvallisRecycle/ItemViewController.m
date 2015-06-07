@@ -17,11 +17,9 @@
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, copy) NSArray *items;
 
-
 @end
 
 @implementation ItemViewController
-
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -45,7 +43,6 @@
 {
     _URL = URL;
     NSLog(@"--%@",URL);
-    
     if (_URL) {
         [self fetchFeed];
       
@@ -75,33 +72,22 @@
 
 
 
-
+//gets data from the api to display in the view
 - (void)fetchFeed
 {
-    
+    //sets the cache policy
     NSURLRequest *req = [NSURLRequest requestWithURL:_URL cachePolicy:NSURLRequestReloadIgnoringCacheData
                                      timeoutInterval:60.0];
-    
    NSURLSessionDataTask *dataTask =
     [self.session dataTaskWithRequest:req
                     completionHandler:
      ^(NSData *data, NSURLResponse *response, NSError *error) {
-         
-         
-         NSLog(@"data -->%@", data);
+
          NSError *err = nil;
          NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data
                                                                     options:0
                                                                       error:&err];
-         
-         NSLog(@"err %@",err);
-         
-         NSLog(@"jsonObject -->%@", jsonObject);
          self.items = jsonObject[@"courses"];
-         
-         
-         NSLog(@"courses -->%@", self.items);
-         
          dispatch_async(dispatch_get_main_queue(), ^{
              [self.tableView reloadData];
          });
@@ -109,6 +95,7 @@
     [dataTask resume];
 }
 
+//creates the UI with a table view
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.items count];
@@ -130,10 +117,9 @@
 {
     NSDictionary *item = self.items[indexPath.row];
     NSURL *URL = [NSURL URLWithString:item[@"url"]];
-    
+    //provides the title and URL at the row to the next view
     self.recycleViewController.title = item[@"title"];
     self.recycleViewController.URL = URL;
-    NSLog(@"--%@",URL);
     [self.navigationController pushViewController:self.recycleViewController
                                          animated:YES];
 }
