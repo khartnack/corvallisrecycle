@@ -18,15 +18,16 @@
 @interface MapViewController ()
 @property CLLocationCoordinate2D coords;
 @property (weak,nonatomic) NSString *geocoder;
-@property (nonatomic, strong) PlaceAnnotation *annotation;
+@property (nonatomic, strong) PlaceAnnotation *annotation;  //holds red circle annotation on map
 @end
 
 @implementation MapViewController
-@synthesize NameDataText;
-@synthesize AddressDataText;
-@synthesize geocoder = _geocoder;
+@synthesize NameDataText;  //holds name of business
+@synthesize AddressDataText;  //holds address of business
+@synthesize geocoder = _geocoder;  //used to find longitude/latitude of location
 
 
+//loads a map with the business centered in the map.
 -(void)viewWillAppear:(BOOL)animated
 {
     
@@ -54,15 +55,18 @@
              CLPlacemark *placemark = placemarks[0];
              CLLocation *location = placemark.location;
              CLLocationCoordinate2D startCenter = location.coordinate;
+             //places an annotation in the map for the business location
              PlaceAnnotation *annotation = [[PlaceAnnotation alloc] init];
              annotation.coordinate = startCenter;
+             //includes a popup bubble with the business name when clicked
              annotation.title = NameDataText;
              self.mapView.zoomEnabled = YES;
              self.mapView.scrollEnabled = YES;
              [self.mapView addAnnotation:annotation];
              
-             CLLocationDistance regionWidth  = 1500;
-             CLLocationDistance regionHeight = 1500;
+             //controls the map size and how zoomed in you want to see the business
+             CLLocationDistance regionWidth  = 1500;  //sets the width of the map
+             CLLocationDistance regionHeight = 1500;  //sets the height of the map.
              MKCoordinateRegion startRegion = MKCoordinateRegionMakeWithDistance(startCenter,regionWidth, regionHeight);
              [self.mapView setRegion:startRegion animated:YES];
          }
