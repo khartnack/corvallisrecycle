@@ -2,9 +2,8 @@
 //  ViewController.h
 //  TableMain
 //
-//  Created by Dave Beltramini on 4/29/15.
+//  Created by Katie Beltramini on 4/29/15.
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
-// testtest
 
 #import <UIKit/UIKit.h>
 

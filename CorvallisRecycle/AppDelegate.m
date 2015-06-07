@@ -2,14 +2,9 @@
 //  AppDelegate.m
 //  CorvallisRecycle
 //
-//  Created by Dave Beltramini on 5/6/15.
+//  Created by Katie Beltramini on 5/6/15.
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
-//
-//  AppDelegate.m
-//  TableMain
-//
-//  Created by Dave Beltramini on 4/29/15.
-//  Copyright (c) 2015 Katie Beltramini. All rights reserved.
+
 
 #import "AppDelegate.h"
 #import "ViewController.h"
@@ -23,7 +18,6 @@
 
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 //from:http://www.appcoda.com/customize-navigation-status-bar-ios-7/
-
 
 
 @implementation AppDelegate

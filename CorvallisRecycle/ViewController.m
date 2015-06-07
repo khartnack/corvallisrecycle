@@ -2,10 +2,9 @@
 //  ViewController.m
 //  CorvallisRecycle
 //
-//  Created by Dave Beltramini on 5/6/15.
+//  Created by Katie Beltramini on 5/6/15.
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
 //
-
 
 #import "AppDelegate.h"
 #import "ViewController.h"
@@ -53,19 +52,19 @@
     self.navigationItem.leftBarButtonItem = backButton;
 }
 
+//if the user clicks on info, then they will go to a new view with information on this app
 -(void)home{
     
     NSLog(@"navigation call for info");
     [self.navigationController pushViewController:infoViewController animated:YES];
 }
 
-
+//fetches the data for the feed using a json api
 - (void)fetchFeed
 {
     NSString *requestString = @"http://web.engr.oregonstate.edu/~marshale/recycleAPI/category";
-    
-   // NSString *requestString = @"http://web.engr.oregonstate.edu/~beltramk/cs496/nerdranch5";
     NSURL *url = [NSURL URLWithString:requestString];
+    //sets the cache policy for the api
     NSURLRequest *req = [NSURLRequest requestWithURL:url  cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60.0];
    
     
@@ -78,20 +77,16 @@
                                                                     options:0
                                                                       error:nil];
          self.categories = jsonObject[@"courses"];
-         
-         NSLog(@"%@", self.categories);
-         
          dispatch_async(dispatch_get_main_queue(), ^{
              [self.tableView reloadData];
          });
      }];
     [dataTask resume];
     
-
-     
-                               
 }
 
+
+//creates a table view ui for data
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.categories count];
@@ -116,8 +111,7 @@
     NSDictionary *category = self.categories[indexPath.row];
     NSURL *URL = [NSURL URLWithString:category[@"url"]];
     
-    NSLog(@"--%@",URL);
-    
+    //logic to push these 2 pieces of data to the next view
     self.itemViewController.title = category[@"title"];
     self.itemViewController.URL = URL;
     
@@ -134,7 +128,6 @@
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
 {
 
-  
 }
 
 
