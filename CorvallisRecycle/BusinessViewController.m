@@ -2,7 +2,7 @@
 //  BusinessViewController.m
 //  TableMain
 //
-//  Created by Dave Beltramini on 5/5/15.
+//  Created by Katie Beltramini on 5/5/15.
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
 // testtest
 
@@ -35,7 +35,6 @@
         _session = [NSURLSession sessionWithConfiguration:config
                                                  delegate:self
                                             delegateQueue:nil];
-        
     }
     return self;
 }
@@ -44,8 +43,6 @@
 - (void)setURL:(NSURL *)URL
 {
     _URL = URL;
-    
-    NSLog(@"--%@",URL);
     if (_URL) {
         [self fetchFeed];
     }
@@ -76,6 +73,7 @@
     // Release anything that's not essential, such as cached data
 }
 
+//function not used now
 -(void)map{
     
     NSLog(@"navigation call for map");
@@ -84,6 +82,7 @@
     
 }
 
+//gets data to populate view from api
 - (void)fetchFeed
 {
     
@@ -101,15 +100,8 @@
          NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data
                                                                     options:0
                                                                       error:&err];
-         
-         NSLog(@"err %@",err);
-         
-         NSLog(@"jsonObject -->%@", jsonObject);
+        
          self.businesses = jsonObject[@"courses"];
-         
-         
-         NSLog(@"courses -->%@", self.businesses);
-         
          dispatch_async(dispatch_get_main_queue(), ^{
              [self.tableView reloadData];
          });
@@ -122,6 +114,7 @@
     return [self.businesses count];
 }
 
+//shows the list of businesses in a table view
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell =
@@ -139,11 +132,10 @@
 {
     NSDictionary *business = self.businesses[indexPath.row];
     NSURL *URL = [NSURL URLWithString:business[@"url"]];
-    
+    //pushes the URL to the next view
     //self.dataViewController.title = business[@"title"];
     self.dataViewController.URL = URL;
     [self.navigationController pushViewController:self.dataViewController animated:YES];
-
      
 }
 
