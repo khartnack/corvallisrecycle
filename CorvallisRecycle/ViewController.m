@@ -29,7 +29,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.navigationItem.title = @"Categories";
+        self.navigationItem.title = @"Corvallis Reuse and Repair Directory";
         
         NSURLSessionConfiguration *config =
         [NSURLSessionConfiguration defaultSessionConfiguration];
