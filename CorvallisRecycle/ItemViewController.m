@@ -2,7 +2,7 @@
 //  ItemViewController.m
 //  TableMain
 //
-//  Created by Dave Beltramini on 4/29/15.
+//  Created by Katie Beltramini on 4/29/15.
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
 //
 
@@ -38,7 +38,7 @@
     return self;
 }
 
-
+//set the url and grab the content by calling fetchFeed
 - (void)setURL:(NSURL *)URL
 {
     _URL = URL;
@@ -129,7 +129,5 @@
     
     
 }
-
-
 
 @end

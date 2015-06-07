@@ -2,7 +2,7 @@
 //  RecycleViewController.h
 //  TableMain
 //
-//  Created by Dave Beltramini on 5/3/15.
+//  Created by Katie Beltramini on 5/3/15.
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
 //
 //
@@ -12,7 +12,6 @@
 #import "ViewController.h"
 #import "ItemViewController.h"
 #import "BusinessViewController.h"
-
 
 @class RecycleViewController;
 @class ItemViewController;

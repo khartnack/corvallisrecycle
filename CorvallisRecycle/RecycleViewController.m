@@ -2,7 +2,7 @@
 //  RecycleViewController.m
 //  TableMain
 //
-//  Created by Dave Beltramini on 5/3/15.
+//  Created by Katie Beltramini on 5/3/15.
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
 //
 
@@ -17,12 +17,9 @@
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, copy) NSArray *recycles;
 
-
 @end
 
 @implementation RecycleViewController
-
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
@@ -34,7 +31,6 @@
         _session = [NSURLSession sessionWithConfiguration:config
                                                  delegate:self
                                             delegateQueue:nil];
-        
     }
     return self;
 }
@@ -70,10 +66,10 @@
 }
 
 
-
+//fetch the content from the api to populate the view
 - (void)fetchFeed
 {
-    
+    //set the cache policy
     NSURLRequest *req = [NSURLRequest requestWithURL:_URL cachePolicy:NSURLRequestReloadIgnoringCacheData
                                      timeoutInterval:60.0];
     
@@ -81,21 +77,12 @@
     [self.session dataTaskWithRequest:req
                     completionHandler:
      ^(NSData *data, NSURLResponse *response, NSError *error) {
-         
-         
-         NSLog(@"data -->%@", data);
+
          NSError *err = nil;
          NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data
                                                                     options:0
                                                                       error:&err];
-         
-         NSLog(@"err %@",err);
-         
-         NSLog(@"jsonObject -->%@", jsonObject);
          self.recycles = jsonObject[@"courses"];
-         
-         
-         NSLog(@"courses -->%@", self.recycles);
          
          dispatch_async(dispatch_get_main_queue(), ^{
              [self.tableView reloadData];
@@ -104,6 +91,8 @@
     [dataTask resume];
 }
 
+
+//show a table for the UI
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.recycles count];
@@ -125,7 +114,7 @@
 {
     NSDictionary *recycle = self.recycles[indexPath.row];
     NSURL *URL = [NSURL URLWithString:recycle[@"url"]];
-    
+    //pass the URL and title of the row to the next view
     self.businessViewController.title = recycle[@"title"];
     self.businessViewController.URL = URL;
     NSLog(@"--%@",URL);
