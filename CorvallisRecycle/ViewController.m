@@ -82,7 +82,6 @@
          });
      }];
     [dataTask resume];
-    
 }
 
 
@@ -106,8 +105,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    //NSLog(@"called");
+
     NSDictionary *category = self.categories[indexPath.row];
     NSURL *URL = [NSURL URLWithString:category[@"url"]];
     
