@@ -17,7 +17,6 @@
 #import "InfoViewController.h"
 #import "RecycleViewController.h"
 #import "BusinessViewController.h"
-#import "BusinessInfoViewController.h"
 #import "DataViewController.h"
 #import "MapViewController.h"
 

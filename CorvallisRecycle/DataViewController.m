@@ -13,7 +13,6 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "ItemViewController.h"
-#import "BusinessInfoViewController.h"
 #import "MapViewController.h"
 #import<MapKit/MapKit.h>
 #import<AddressBook/AddressBook.h>

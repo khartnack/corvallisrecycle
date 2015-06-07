@@ -12,7 +12,6 @@
 #import "ItemViewController.h"
 #import "InfoViewController.h"
 #import "BusinessViewController.h"
-#import "BusinessInfoViewController.h"
 #import "DataViewController.h"
 
 @interface ViewController () <NSURLSessionDelegate>
