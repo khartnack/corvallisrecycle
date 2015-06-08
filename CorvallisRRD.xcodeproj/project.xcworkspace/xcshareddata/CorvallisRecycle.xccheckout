@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4B412142-7CD5-4C92-86B4-25BD8B80B9BE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>42827B8F115E1F1FCE9D58D5137A4FFE1500BEBA</key>
+		<string>https://github.com/khartnack/corvallisrecycle</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CorvallisRRD.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>42827B8F115E1F1FCE9D58D5137A4FFE1500BEBA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/khartnack/corvallisrecycle</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>42827B8F115E1F1FCE9D58D5137A4FFE1500BEBA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>42827B8F115E1F1FCE9D58D5137A4FFE1500BEBA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>corvallisrecycle</string>
+		</dict>
+	</array>
+</dict>
+</plist>
