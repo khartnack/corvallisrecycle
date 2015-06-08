@@ -35,8 +35,8 @@
         _session = [NSURLSession sessionWithConfiguration:config
                                                  delegate:self
                                             delegateQueue:nil];
-    NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
-        NSLog(@"bi%@", bundleIdentifier);
+  //  NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
+      //  NSLog(@"bi%@", bundleIdentifier);
         [self fetchFeed];
     }
     return self;
