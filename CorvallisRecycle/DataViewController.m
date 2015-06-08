@@ -2,7 +2,7 @@
 //  DataViewController.m
 //  CorvallisRecycle
 //
-//  Created by Dave Beltramini on 5/12/15.
+//  Created by Katie Beltramini on 5/12/15.
 //  Copyright (c) 2015 Katie Beltramini. All rights reserved.
 //images from: http://www.myiconfinder.com/icon/phone-call-calling-contact-us-tele-telephone-//communication-cell-landline/10348
 
@@ -16,7 +16,6 @@
 #import "MapViewController.h"
 #import<MapKit/MapKit.h>
 #import<AddressBook/AddressBook.h>
-
 
 
 @interface DataViewController () <NSURLSessionDelegate>
@@ -78,7 +77,7 @@
         [self fetchFeed];
     }
 }
-
+//fetches data from the api and parses it
 - (void)fetchFeed
 {
     NSURLRequest *req = [NSURLRequest requestWithURL:_URL cachePolicy:NSURLRequestReloadIgnoringCacheData
@@ -141,6 +140,9 @@
     }
     self.WSData.text = self.WSDataText;
     self.PhoneData.text = self.PhoneDataText;
+    
+    //if there is no phone number, it will come as N/A.  Otherwise it will be a string of 11 numbers
+    //below is used to format the string of numbers so that it looks like (123)456-7777
     if (![self.PhoneData.text isEqualToString: @"N/A"])
         {
  
@@ -154,6 +156,7 @@
         }
 }
 
+//if the user clicks on the button for driving directions
 - (IBAction)addressButton:(id)sender {
     
     NSLog(@"addressButton");
@@ -181,6 +184,7 @@
      }];
 }
 
+//brings user to map in safari with address featured
 -(void)showMap
 {
     NSDictionary *address = @{
@@ -195,6 +199,7 @@
     [mapItem openInMapsWithLaunchOptions:nil];
 }
 
+//action if the user clicks on the business website - will bring user to safari
 - (IBAction)viewWebSite:(id)sender
 {
 
@@ -202,6 +207,7 @@
     
 }
 
+//action if user clicks on phone number (does not work in simulator) - phone will dial number
 -(IBAction)callPhone:(id)sender {
     NSLog(@"--open url%@",self.PhoneDataText);
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"telprompt://%@", self.PhoneDataText]]];
