@@ -26,14 +26,13 @@
 		83BE27181AFA7F3400D92361 /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BE27171AFA7F3400D92361 /* ItemViewController.m */; };
 		83BE271B1AFA7F6D00D92361 /* RecycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BE271A1AFA7F6D00D92361 /* RecycleViewController.m */; };
 		83BE271E1AFA7FA200D92361 /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BE271D1AFA7FA200D92361 /* BusinessViewController.m */; };
-		83BE27311AFA821700D92361 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BE272F1AFA821700D92361 /* InfoViewController.m */; };
+		83CB18781B26A43200405B81 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB18771B26A43200405B81 /* InfoViewController.m */; };
 		83D521551B1D5BF300738B1D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D521541B1D5BF300738B1D /* AddressBook.framework */; };
 		83D521571B1D5ECC00738B1D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D521561B1D5ECC00738B1D /* CoreLocation.framework */; };
 		83D521781B1D736F00738B1D /* PlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D521771B1D736F00738B1D /* PlaceAnnotation.m */; };
 		83D5217A1B1D742B00738B1D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D521791B1D742B00738B1D /* MapKit.framework */; };
 		83FD07531B1EA7DF00D0DED6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FD07501B1EA7DF00D0DED6 /* MapViewController.m */; };
 		83FD07571B2004DF00D0DED6 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 83FD07561B2004DF00D0DED6 /* map.png */; };
-		83FF29D01AFA920B002FB537 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BE272F1AFA821700D92361 /* InfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +76,8 @@
 		83BE271A1AFA7F6D00D92361 /* RecycleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecycleViewController.m; sourceTree = "<group>"; };
 		83BE271C1AFA7FA200D92361 /* BusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessViewController.h; sourceTree = "<group>"; };
 		83BE271D1AFA7FA200D92361 /* BusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessViewController.m; sourceTree = "<group>"; };
-		83BE272E1AFA821700D92361 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoViewController.h; path = CorvallisRecycleTests/InfoViewController.h; sourceTree = SOURCE_ROOT; };
-		83BE272F1AFA821700D92361 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoViewController.m; path = CorvallisRecycleTests/InfoViewController.m; sourceTree = SOURCE_ROOT; };
+		83CB18771B26A43200405B81 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		83CB18791B26A4B500405B81 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		83D521541B1D5BF300738B1D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		83D521561B1D5ECC00738B1D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		83D521761B1D736900738B1D /* PlaceAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceAnnotation.h; sourceTree = "<group>"; };
@@ -150,14 +149,14 @@
 				83BE271D1AFA7FA200D92361 /* BusinessViewController.m */,
 				83D521761B1D736900738B1D /* PlaceAnnotation.h */,
 				83D521771B1D736F00738B1D /* PlaceAnnotation.m */,
+				83CB18771B26A43200405B81 /* InfoViewController.m */,
+				83CB18791B26A4B500405B81 /* InfoViewController.h */,
 				83BE26FA1AFA7E0900D92361 /* Main.storyboard */,
 				83BE26FD1AFA7E0900D92361 /* Images.xcassets */,
 				8344E8771B03E23200C01F8C /* 16-16-bae1463b4228b5053cf1c9a7986ed827.png */,
 				8391A5891B027A7C005A7D8E /* icon.png */,
 				83FD07561B2004DF00D0DED6 /* map.png */,
 				8391A5871B027395005A7D8E /* recycle.jpg */,
-				83BE272E1AFA821700D92361 /* InfoViewController.h */,
-				83BE272F1AFA821700D92361 /* InfoViewController.m */,
 				832E7E0B1AFA8656000D73CD /* InfoViewController.xib */,
 				83BE26FF1AFA7E0900D92361 /* LaunchScreen.xib */,
 				83BE26F01AFA7E0800D92361 /* Supporting Files */,
@@ -313,8 +312,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83FF29D01AFA920B002FB537 /* InfoViewController.m in Sources */,
 				83BE271E1AFA7FA200D92361 /* BusinessViewController.m in Sources */,
+				83CB18781B26A43200405B81 /* InfoViewController.m in Sources */,
 				83BE271B1AFA7F6D00D92361 /* RecycleViewController.m in Sources */,
 				8344E8751B02C91B00C01F8C /* DataViewController.m in Sources */,
 				83BE26F91AFA7E0900D92361 /* ViewController.m in Sources */,
@@ -331,7 +330,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				83BE270D1AFA7E0900D92361 /* CorvallisRecycleTests.m in Sources */,
-				83BE27311AFA821700D92361 /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

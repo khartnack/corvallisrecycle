@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>AC86F71B-3E5C-4620-80C1-8AE6706A604E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>CorvallisRRD</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>42827B8F115E1F1FCE9D58D5137A4FFE1500BEBA</key>
 		<string>https://github.com/khartnack/corvallisrecycle</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CorvallisRRD.xcodeproj/project.xcworkspace</string>
+	<string>CorvallisRRD.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>42827B8F115E1F1FCE9D58D5137A4FFE1500BEBA</key>
