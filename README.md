@@ -1,6 +1,6 @@
 # corvallisrecycle
 
-Download the xCode project: CorvallisRRD (also found: https://github.com/khartnack/corvallisrecycle)
+Download the xCode project: 
 Once downloaded and unzipped, you double click on “CorvallisRecycle.xcodeproj.
 There is an issue with the scheme with other users to fix this go into the folder with the project(CorvallisRDD) right click the file called CorvallisRRD.xcodeproj and select show package contents
 From here go into xcuserdata and rename the file dbeltramini77.xcuserdatad to whatever the username of the mac that is going to run the code is .xcuserdatad, for example my username on my mac is ryanmckelvey
